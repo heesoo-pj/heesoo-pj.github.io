@@ -1,0 +1,273 @@
+.wrap__pc {
+  nav {
+    position: fixed;
+    right: 90px;
+    top: 380px;
+    z-index: 10;
+
+    ul {
+      width: 180px;
+      text-align: right;
+    }
+
+    li {
+      position: relative;
+      display: inline-block;
+      width: 158px;
+      height: 40px;
+      line-height: 40px;
+      margin-bottom: 8px;
+      text-align: right;
+      font-size: 22px;
+      color: #cb2d39;
+      cursor: pointer;
+
+      &:first-child {
+        width: 118px;
+      }
+
+      &:nth-child(4) {
+        width: 178px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 40px;
+        text-decoration: none;
+        color: #cb2d39;
+      }
+
+      span {
+        display: inline-block;
+
+        &.nav__txt {
+          vertical-align: top;
+          font-family: 'Noto Sans KR', sans-serif, 'Malgun Gothic', '맑은고딕',
+            'Dotum', '돋움', 'Gulim', '굴림';
+          font-weight: 500;
+        }
+
+        &.nav__icon {
+          width: 38px;
+          height: 38px;
+          text-align: center;
+          margin: 1px 1px 0 8px;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 41px;
+        border-radius: 20px;
+        width: 40px;
+        height: 40px;
+        background: #cb2d39;
+        z-index: -1;
+        transition: width 0.5s;
+      }
+
+      &.on {
+        color: #f9cbcf;
+
+        &:after {
+          width: 100%;
+        }
+      }
+      &:hover {
+        color: #f9cbcf;
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+%hamburger-bar {
+  width: inherit;
+  height: 4px;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+  transition-property: transform;
+  background-color: #4d181c;
+}
+
+.wrap__m {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: inherit;
+      padding: 0 40px;
+    }
+
+    .btn__hamburger {
+      position: absolute;
+      right: 30px;
+      top: 37px;
+      display: inline-block;
+      overflow: visible;
+      cursor: pointer;
+      z-index: 50;
+
+      &-box {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 38px;
+      }
+
+      &-inner {
+        position: absolute;
+        top: 50%;
+        display: block;
+        @extend %hamburger-bar;
+        transform: translateY(-50%);
+
+        &:after,
+        &:before {
+          position: absolute;
+          display: block;
+          content: '';
+          @extend %hamburger-bar;
+        }
+
+        &:before {
+          top: -16px;
+          transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+        }
+
+        &:after {
+          bottom: -16px;
+          transition: bottom 0.1s ease-in 0.25s,
+            transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+      }
+
+      // navigation 활성화
+      &.on {
+        .btn__hamburger-inner {
+          transition-delay: 0.1s;
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transform: rotate(225deg);
+
+          &:before {
+            top: 0;
+            transition: top 0.1s ease-out,
+              transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+            transform: rotate(-90deg);
+            background-color: #937a7c;
+          }
+
+          &:after {
+            bottom: 0;
+            transition: bottom 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+            background-color: #937a7c;
+          }
+        }
+      }
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 640px;
+      width: 100%;
+      height: 100%;
+      transition-delay: 0.8s;
+
+      .dimm {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        transition: opacity 0.6s ease-in 0.12s;
+        z-index: 5;
+      }
+
+      &__inner {
+        position: absolute;
+        top: 0;
+        right: -463px;
+        display: flex;
+        padding: 200px 0 0 106px;
+        flex-direction: column;
+        width: 400px;
+        font-size: 0;
+
+        height: inherit;
+        background: #fff;
+        transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+        z-index: 10;
+      }
+
+      a {
+        display: inline-block;
+        width: 240px;
+        height: 51px;
+        margin-bottom: 39px;
+        @include background(
+          map-get($SingleEssence, 'mo-image-url') + '/nav_list.png'
+        );
+
+        //border-bottom: 1px solid #e4dcde;
+        //font-size: 0;
+        vertical-align: top;
+
+        // &.on {
+        //   //  @include background($image-url + '/ir-navs-on.png');
+        //   color: red;
+        // }
+
+        @for $i from 1 through 6 {
+          &:nth-child(#{$i}) {
+            background-position-y: -(($i - 1) * 90) + px;
+          }
+        }
+      }
+    }
+
+    .input__virtual {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 1px;
+      opacity: 0.01;
+
+      // navigation 활성화
+      &:checked ~ .nav {
+        left: 0px;
+        transition-delay: 0s;
+
+        .dimm {
+          opacity: 1;
+        }
+
+        .nav__inner {
+          right: 0;
+        }
+      }
+    }
+  }
+}

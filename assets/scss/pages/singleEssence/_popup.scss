@@ -1,0 +1,487 @@
+.wrap {
+
+  // 팝업 전체 style reset
+  .popup {
+    &__mask {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    &__dialog {
+      background: #ffeded;
+
+      /* IE10+ */
+      @media screen and (-ms-high-contrast: active),
+      (-ms-high-contrast: none) {
+        margin-left: -320px;
+      }
+
+      position: absolute;
+    }
+
+    &__header {
+      font-size: 0;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+
+    &__inner {
+      width: 550px;
+      margin: 0 auto;
+      padding-bottom: 40px;
+    }
+
+    .btnBox {
+      display: flex;
+    }
+
+    .footer__inner {
+      margin-left: 40px;
+      margin-top: -30px;
+      margin-bottom: 30px;
+    }
+
+    &Btn {
+      font-size: 0;
+      cursor: pointer;
+    }
+
+    &Btn__close {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      width: 35px;
+      height: 34px;
+      @include background(map-get($SingleEssence, 'popup-image-url') + '/btn_close.png'
+      );
+
+      &-b {
+        @include background(map-get($SingleEssence, 'popup-image-url') + '/btn_close_b.png'
+        );
+      }
+    }
+
+    &Btn__close--full {
+      width: 100%;
+      height: 108px;
+      @include background(map-get($SingleEssence, 'popup-image-url') + '/btn__close_big.jpg'
+      );
+    }
+
+    &__btn--complete {
+      width: 100%;
+      height: 108px;
+      @include background(map-get($SingleEssence, 'popup-image-url') + '/btn__winCheck.png'
+      );
+      font-size: 0;
+    }
+
+    &__btn--reviewComplete {
+      width: 100%;
+      height: 108px;
+      @include background(map-get($SingleEssence, 'popup-image-url') + '/btn_reviewcomplete.png'
+      );
+      font-size: 0;
+    }
+
+    &__btn--link-to-sign-in {
+      width: 200px;
+      height: 50px;
+      @include background(map-get($SingleEssence, 'popup-image-url') + '/btn--popup-sign-in.png'
+      );
+    }
+
+    .info {
+      &__name {
+        margin-top: 53px;
+
+        label {
+          @include background(map-get($SingleEssence, 'popup-image-url') + '/label-name.png'
+          );
+        }
+      }
+
+      &__phone {
+        label {
+          @include background(map-get($SingleEssence, 'popup-image-url') + '/label-pheon.png'
+          );
+        }
+      }
+
+      &__address {
+        label {
+          @include background(map-get($SingleEssence, 'popup-image-url') + '/label-address.png',
+            $position: center left);
+        }
+      }
+
+      &__url {
+        label {
+          @include background(map-get($SingleEssence, 'popup-image-url') + '/label-url.png',
+            $position: center left);
+        }
+
+        &-fake {
+          display: inline-block;
+          width: 243px;
+          margin-right: 10px;
+          padding: 0 20px;
+          line-height: 62px;
+          font-size: 21px;
+          background: #fff;
+          color: #999;
+        }
+      }
+
+      &__group {
+        font-size: 0;
+
+        // 기본 css 설정
+        label {
+          flex: 0 0 109px;
+          width: 109px;
+          font-size: 0;
+        }
+
+        input {
+          // width: 100%;
+          padding: 0 20px;
+        }
+
+        select {
+          padding: 0 32px;
+        }
+
+        input,
+        select {
+          width: 190px;
+          height: 62px;
+          line-height: 62px;
+          border-radius: 0px;
+          font-size: 22px;
+          font-family: 'Noto Sans KR', sans-serif;
+
+          &#personalInfoPhone {
+            font-size: 18px;
+            padding-right: 10px;
+          }
+        }
+
+        // 들여쓰는 라인
+        .indent {
+          margin: 10px 0 0 0;
+
+          &.kmc {
+            margin: 10px 0 0 109px;
+          }
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #d6c6c1;
+        }
+      }
+
+      &__item {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+
+        button,
+        select {
+          flex: 0 0 190px;
+          width: 190px;
+          height: 62px;
+          margin-left: 8px;
+          font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .phone__corp {
+          width: 190px;
+          font-weight: 100;
+          @include background(map-get($SingleEssence, 'popup-image-url') + '/select-arrow.png',
+            $position: 90% 50%,
+            $color: #390205);
+          letter-spacing: -1px;
+          color: #fff;
+        }
+      }
+    }
+
+    .agree {
+      &__group {
+        margin-top: 45px;
+
+        label {
+          position: relative;
+          width: 100%;
+        }
+      }
+
+      &__all {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        margin-bottom: 8px;
+        border-bottom: 2px solid #d7b367;
+      }
+
+      // &__item:not(:first-child) {
+      &__item {
+        margin-top: 20px;
+        color: #8b7c7c;
+        font-size: 20px;
+        letter-spacing: -0.8px;
+      }
+    }
+
+    // .agree__item:nth-child(1) {
+    //   .popupBtn__agreeDetail {
+    //     width: 0;
+    //     height: 0;
+    //     background: none;
+    //   }
+    // }
+    &__alert {
+      .popup__inner {
+        padding-bottom: 0;
+      }
+
+      .complete-day {
+        padding-bottom: 70px;
+        color: #e4c6c6;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: -0.8px;
+        text-align: center;
+      }
+    }
+
+    &__event1Step1 {
+      .popup__content {
+        height: 990px;
+        background: none;
+      }
+
+      .emblem{
+        position: absolute;
+        top:87px;
+        right:60px;
+        opacity: 0;
+        transition: opacity 1s;
+        &.on{
+          opacity: 1;
+        }
+      }
+      .popup__inner {
+        margin: 0;
+        padding: 0;
+      }
+
+      .product {
+        &__textBox {
+          position: relative;
+          top: 56px;
+          left: 0;
+          width: 640px;
+          height: 336px;
+          @include background(map-get($SingleEssence, 'popup-image-url') + '/step2_txt.png'
+          );
+          text-align: center;
+          opacity: 0;
+          transition: all 1s;
+          transition-delay: 2s;
+
+
+
+          &.on {
+            opacity: 1;
+          }
+        }
+
+        &__text {
+          padding-top: 55px;
+          line-height: 70px;
+
+          >img {
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    &__event1Step2 {
+      .popup__content {
+        height: 1190px;
+        @include background(map-get($SingleEssence, 'popup-image-url') + '/bg_pop_step2_v2.jpg'
+        );
+      }
+
+      .popup__inner {
+        width: 640px;
+        height: 100%;
+      }
+
+      .eventStep2__txt {
+        margin-top: 217px;
+      }
+
+      .graphWrap {
+        position: relative;
+        margin: 60px 0 0 208px;
+      }
+
+      .thum__item {
+        position: relative;
+        width: 100%;
+        height: 258px;
+
+        li {
+          position: absolute;
+          width: 146px;
+          height: 126px;
+          font-size: 0;
+          -webkit-tap-highlight-color: transparent;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+          @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+              @include background(map-get($SingleEssence, 'popup-image-url') + '/thum_'+ $i + '.png',
+                $position: center top);
+            }
+          }
+
+          &.on {
+            background-position: center bottom;
+          }
+
+          &:nth-child(1) {
+            left: 22px;
+            top: 1px;
+          }
+
+          &:nth-child(2) {
+            left: 134px;
+            top: 66px;
+          }
+
+          &:nth-child(3) {
+            top: 3px;
+            left: 247px;
+          }
+
+          &:nth-child(4) {
+            top: 67px;
+            left: 359px;
+          }
+
+          &:nth-child(5) {
+            left: 471px;
+            top: 2px;
+          }
+
+        }
+      }
+    }
+
+    &__popStore {
+      ul {
+        width: 520px;
+        margin: 0 auto;
+      }
+
+      li {
+        position: relative;
+        display: inline-block;
+        width: 234px;
+        height: 142px;
+        background: #fff;
+        margin-bottom: 67px;
+        border-radius: 10px;
+        font-size: 0;
+        @include background(map-get($SingleEssence, 'popup-image-url') + '/store_list.jpg'
+        );
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -40px;
+          left: 50%;
+          margin-left: -59px;
+          width: 118px;
+          height: 24px;
+          @include background(map-get($SingleEssence, 'popup-image-url') + '/store_thum.png'
+          );
+        }
+
+        &:nth-child(odd) {
+          margin-right: 50px;
+        }
+
+        @for $i from 1 through 7 {
+          &:nth-child(#{$i}) {
+            background-position-y: -(($i - 1) * 142) + px;
+          }
+        }
+
+        >a {
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          height: 130%;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .popupBtn {
+    &__event1Join {
+      position: absolute;
+      bottom: 101px;
+      left: 152px;
+      width: 335px;
+      height: 72px;
+    }
+
+    &__agreeDetail {
+      flex: 0 0 127px;
+      width: 127px;
+      height: 37px;
+      font-size: 0;
+      cursor: pointer;
+      @include background(map-get($SingleEssence, 'popup-image-url') + '/btn_agreeHint.png'
+      );
+    }
+
+    &__phoneAuth,
+    &__zipcode,
+    &__phoneAuth--complete {
+      font-size: 23px;
+      background-color: #390205;
+      color: #fff;
+      letter-spacing: -1px;
+      font-weight: 100;
+    }
+
+    &__nextStep {
+      position: absolute;
+      top: 633px;
+      left: 152px;
+      width: 336px;
+      height: 86px;
+    }
+  }
+
+  .popup__agree {
+    .popup__dialog {
+      background: #ffeded;
+    }
+  }
+}

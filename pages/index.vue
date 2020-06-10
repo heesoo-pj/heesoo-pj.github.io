@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <logo />
+      <Logo />
       <h1 class="title">
         pj
       </h1>
