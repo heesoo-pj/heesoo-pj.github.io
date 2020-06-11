@@ -134,5 +134,35 @@ export default {
       })
     ],
     transpile: ['nano-loader', 'vue-daum-postcode']
+  },
+  proxy: {
+    '/api/': {
+      target: 'http://localhost:8080/api',
+      pathRewrite: {
+        '^/api/': ''
+      },
+      changeOrigin: true
+    },
+    '/cognito-manager/': {
+      target: 'http://localhost:8080/cognito-manager/',
+      pathRewrite: {
+        '^/cognito-manager/': ''
+      },
+      changeOrigin: true
+    },
+    '/manager/': {
+      target: 'http://localhost:8080/manager/',
+      pathRewrite: {
+        '^/manager/': ''
+      },
+      changeOrigin: true
+    },
+    '/user-check-ad': {
+      target: 'http://localhost:8080/user-check-ad',
+      pathRewrite: {
+        '^/user-check-ad': ''
+      },
+      changeOrigin: true
+    }
   }
 }
