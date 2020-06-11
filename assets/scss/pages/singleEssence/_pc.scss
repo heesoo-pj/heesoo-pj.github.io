@@ -1,0 +1,578 @@
+.wrap__pc {
+  min-width: 1200px;
+  margin: 0 auto;
+
+  .section {
+    position: relative;
+
+    &__inner {
+      position: relative;
+      width: 1200px;
+      height: inherit;
+      margin: 0 auto;
+    }
+  }
+
+  .visual {
+    height: 1080px;
+    @include background(map-get($SingleEssence, 'pc-image-url') + '/bg_kv.jpg',
+      $position: top center,
+      $color: #fabec3);
+
+    &_logo {
+      display: inline-block;
+      position: relative;
+      top: 60px;
+      left: 75px;
+    }
+
+    &_scroll {
+      position: absolute;
+      bottom: 95px;
+      left: 50%;
+      margin-left: -22px;
+      cursor: pointer;
+    }
+  }
+
+  .videoShared {
+    height: 1078px;
+
+    @include background(map-get($SingleEssence, 'pc-image-url') + '/bg_video_v2.jpg',
+      $position: top center);
+    font-size: 0;
+
+    &__tab {
+      position: relative;
+      top: 145px;
+      left: 0;
+
+      >button {
+        width: 196px;
+        height: 64px;
+        font-size: 0;
+        background-position-y: top;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+
+        &.on {
+          background-position-y: bottom;
+        }
+      }
+
+      &01 {
+        @include background(map-get($SingleEssence, 'pc-image-url') + '/videoShared_tab1.png'
+        );
+      }
+
+      &02 {
+        @include background(map-get($SingleEssence, 'pc-image-url') + '/videoShared_tab2.png'
+        );
+      }
+
+      &03 {
+        @include background(map-get($SingleEssence, 'pc-image-url') + '/videoShared_tab3.png'
+        );
+      }
+    }
+
+    &__wrap {
+      position: relative;
+      width: 1200px;
+      height: 675px;
+      top: 145px;
+      margin: 0 auto 55px;
+    }
+
+    .video__cover {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 677px;
+      transition: opacity 0.5s;
+      cursor: pointer;
+      // @include background(map-get($SingleEssence, 'pc-image-url') + '/video_cover.png',
+      //   $position: top center,
+      //   $color: #000);
+
+
+      &.tvc {
+        @include background(map-get($SingleEssence, 'pc-image-url') + '/video_cover-tvc.png',
+          $position: top center,
+          $color: #000);
+        background-size: cover;
+      }
+
+      &.digital {
+        @include background(map-get($SingleEssence, 'pc-image-url') + '/video_cover-digital.png',
+          $position: top center,
+          $color: #000);
+        background-size: cover;
+      }
+
+      &.digital_b {
+        @include background(map-get($SingleEssence, 'pc-image-url') + '/video_cover-digital_b.png',
+          $position: top center,
+          $color: #000);
+        background-size: cover;
+      }
+    }
+
+    .share_btnWarp {
+      width: 372px;
+      margin: 187px auto 0;
+
+      button {
+        font-size: 0;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .btn__kakao {
+        margin: 0 42px;
+      }
+    }
+  }
+
+  .eventWrap {
+    position: relative;
+    height: 1073px;
+    background: #fbcece;
+    overflow: hidden;
+
+    .event1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1073px;
+      @include background(map-get($SingleEssence, 'pc-image-url') + '/bg_event1.png',
+        $position: top center,
+        $color: #f9dddd);
+      transition: all 1s;
+    }
+
+    .product {
+      &__gif {
+        transition: opacity 1s;
+        opacity: 0;
+        height: 100%;
+        position: absolute;
+        left: -359px;
+        top: -0;
+
+        &.on {
+          opacity: 1;
+        }
+      }
+
+      &__item {
+        position: absolute;
+        right: 40px;
+        top: 480px;
+        width: 546px;
+        font-size: 0;
+
+        li {
+          display: inline-block;
+          width: 166px;
+          height: 166px;
+          margin-left: 20px;
+          vertical-align: top;
+          border-radius: 50%;
+          box-shadow: 10px 10px 30px #e6c2c2;
+          transition: all 0.5s;
+          font-size: 0;
+          cursor: pointer;
+
+          &:nth-child(1),
+          &:nth-child(4) {
+            margin-left: 0;
+          }
+
+          &:nth-child(n + 4) {
+            margin-top: 15px;
+          }
+
+          @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+              @include background(map-get($SingleEssence, 'pc-image-url') + '/llist_off'+ $i + '_v2.png',
+                $position: top center,
+                $color: #fff);
+            }
+          }
+
+          &.on {
+            @for $i from 1 through 6 {
+              &:nth-child(#{$i}) {
+                @include background(map-get($SingleEssence, 'pc-image-url') + '/llist_on'+ $i + '_v2.png',
+                  $position: top center,
+                  $color: #aa202a);
+              }
+            }
+          }
+        }
+      }
+
+      &__textBox {
+        position: relative;
+        top: 594px;
+        left: 0;
+        width: 485px;
+        height: 158px;
+        @include background(map-get($SingleEssence, 'pc-image-url') + '/event2_txtbox.png',
+          $position: top center);
+        opacity: 0;
+        transition: opacity 1s;
+        // transition-delay: 2.5s;
+
+        &.on {
+          opacity: 1;
+        }
+      }
+
+      &__text {
+        position: absolute;
+        top: 45px;
+        left: 5px;
+        width: 472px;
+        text-align: center;
+        height: 69px;
+        line-height: 69px;
+
+        >img {
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .eventStep2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1073px;
+      @include background(map-get($SingleEssence, 'pc-image-url') + '/bg_event2_v2.jpg',
+        $position: top center,
+        $color: #f5878a);
+      transition: all 1s;
+
+      &__txt {
+        padding-top: 390px;
+      }
+
+      &__tumbImg {
+        position: absolute;
+        top: 155px;
+        right: 145px;
+      }
+
+      .graphWrap {
+        position: relative;
+        top: 100px;
+      }
+
+      .thum__item {
+        position: absolute;
+        right: 195px;
+        top: 157px;
+        width: 366px;
+        height: 764px;
+        font-size: 0;
+
+        li {
+          position: absolute;
+          width: 154px;
+          height: 134px;
+
+          vertical-align: top;
+          // transition: all 0.5s;
+          font-size: 0;
+          cursor: pointer;
+
+          &:nth-child(1) {
+            right: 2px;
+            top: 0px;
+          }
+
+          &:nth-child(2) {
+            right: 161px;
+            top: 122px;
+          }
+
+          &:nth-child(3) {
+            left: -1px;
+            top: 315px;
+          }
+
+          &:nth-child(4) {
+            right: 163px;
+            top: 510px;
+          }
+
+          &:nth-child(5) {
+            right: -5px;
+            bottom: 1px;
+          }
+
+
+          @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+              @include background(map-get($SingleEssence, 'pc-image-url') + '/thum_'+ $i + '.png',
+                $position: top center);
+            }
+          }
+
+          &.on {
+            background-position: bottom center;
+          }
+        }
+      }
+      .emblem{
+        position: absolute;
+        right:173px;
+        top:430px;
+      }
+    }
+  }
+
+  .product {
+    &_01{
+      height: 1076px;
+      @include background(map-get($SingleEssence, 'pc-image-url') + '/bg_product.png',
+        $position: top center,$color:#fedada);
+  
+      .thum-icon {
+        position: absolute;
+        left: 30px;
+        top: 645px;
+      }
+    }
+    &_02{
+      height: 917px;
+      @include background(map-get($SingleEssence, 'pc-image-url') + '/bg_product2.jpg',
+        $position: top center, $color:#ffcaca);
+  
+      .thum-icon {
+        position: absolute;
+        left: 30px;
+        top: 645px;
+      }
+    }
+  }
+
+  .reviewEvent {
+    height: 1079px;
+    @include background(map-get($SingleEssence, 'pc-image-url') + '/bg_review.jpg',
+      $position: top center,
+      $color: #ffdada);
+
+    .swiper-container {
+      width: 465px;
+      height: 850px;
+      position: absolute;
+      right: 3px;
+      top: 229px;
+    }
+
+    .swiper-slide {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .notice {
+    background-color: #efe5e4;
+    padding-bottom: 30px;
+    font-size: 17px;
+    color: #6b635f;
+
+    a {
+      color: #6b635f;
+      text-decoration: none;
+      cursor: auto;
+    }
+
+    h3 {
+      padding: 55px 0 35px;
+    }
+
+    &__title {
+      display: inline-block;
+      margin-bottom: 5px;
+      padding: 5px;
+      background: #cb2d39;
+      color: #fff;
+    }
+
+    ul {
+      padding-bottom: 23px;
+      overflow: hidden;
+    }
+
+    li {
+      position: relative;
+      left: 10px;
+
+      line-height: 30px;
+      font-weight: 400;
+      letter-spacing: -0.2px;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        top: 0;
+        left: -10px;
+      }
+    }
+  }
+
+  .btn {
+    font-size: 0;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &__kit {
+      transition: all 0.5s;
+      position: absolute;
+      bottom: 77px;
+      right: 260px;
+      width: 320px;
+      height: 72px;
+
+      @include background(map-get($SingleEssence, 'pc-image-url') + '/btn_kit-v2.png'
+      );
+
+      &.on {
+        box-shadow: 10px 4px 20px #c7a0a0;
+        @include background(map-get($SingleEssence, 'pc-image-url') + '/btn_kit-on-v2.png',
+          $color: #661017);
+      }
+    }
+
+    &__share {
+      width: 95px;
+      height: 95px;
+    }
+
+    &__event1Join {
+      position: absolute;
+      bottom: 96px;
+      left: 0;
+      width: 320px;
+      height: 72px;
+    }
+
+    &__retrun {
+      position: absolute;
+      right: 30px;
+      top: 40px;
+      width: 38px;
+      height: 40px;
+      @include background(map-get($SingleEssence, 'pc-image-url') + '/btn_return.png'
+      );
+    }
+
+    &__buy {
+      position: absolute;
+      display: inline-block;
+      width: 244px;
+      height: 55px;
+      bottom: 125px;
+      right: 304px;
+    }
+
+    &__storeGo {
+      position: absolute;
+      display: inline-block;
+      width: 244px;
+      height: 55px;
+      bottom: 125px;
+      right: 41px;
+    }
+
+    &__hashCopy {
+      position: absolute;
+      display: inline-block;
+      width: 286px;
+      height: 72px;
+      bottom: 104px;
+      left: 0;
+    }
+
+    &__reviewJoin {
+      position: absolute;
+      display: inline-block;
+      width: 286px;
+      height: 72px;
+      bottom: 104px;
+      left: 303px;
+    }
+  }
+}
+
+.floating {
+  animation-name: floating;
+  -webkit-animation-name: floating;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  50% {
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  50% {
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 5s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+  {
+  opacity: 0;
+}
