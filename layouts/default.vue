@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <nuxt :class="`wrap__${isDesktop ? 'pc' : 'm'}`" class="wrap" />
-  </div>
+  <nuxt :class="`wrap__${isDesktop ? 'pc' : 'm'}`" class="wrap" />
 </template>
 
 <script>

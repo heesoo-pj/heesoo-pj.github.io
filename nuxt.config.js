@@ -23,9 +23,7 @@ export default {
       }
     ],
     // TODO: script 설정
-    script: [{
-      src: 'https://developers.kakao.com/sdk/js/kakao.min.js'
-    }],
+    script: [],
     // TODO : favicon 설정
     link: [
       //   {
