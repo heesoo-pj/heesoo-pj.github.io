@@ -133,6 +133,10 @@ class ShapeOverlays {
 }
 
 export default {
+  layoutTransition: {
+    name: 'layout',
+    mode: 'out-in'
+  },
   components: {
     Logo,
     Nav
@@ -172,12 +176,13 @@ export default {
 
       if (!openBoolen) {
         elmHamburger.classList.add('is-opened-navi')
+        elmOverlay.classList.add('is-opened')
         for (let i = 0; i < gNavItems.length; i++) {
           gNavItems[i].classList.add('is-opened')
-          // gNavItems[i].classList.add('shape-overlays')
         }
       } else {
         elmHamburger.classList.remove('is-opened-navi')
+        elmOverlay.classList.remove('is-opened')
         for (let i = 0; i < gNavItems.length; i++) {
           gNavItems[i].classList.remove('is-opened')
         }
