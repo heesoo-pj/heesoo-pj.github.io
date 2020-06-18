@@ -3,14 +3,14 @@
     <div
       :style="customDuration"
       :class="['popup', `popup__${className}`]"
-      @keyup.esc="onEsc"
       tabindex="-1"
+      @keyup.esc="onEsc"
     >
       <div
         v-if="mask"
-        @click.self="onClickMask"
         :style="customMaskStyles"
         class="popup__mask"
+        @click.self="onClickMask"
       ></div>
 
       <transition :name="`popup__animation--${animation}`">
@@ -36,8 +36,8 @@
           <slot name="closeButton">
             <button
               v-if="closeButton"
-              @click="closePop()"
               class="popupBtn__close"
+              @click="closePop()"
             >
               닫기
             </button>

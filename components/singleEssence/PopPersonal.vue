@@ -1,21 +1,21 @@
 <template>
   <div>
     <!-- type종류 empty:빈팝업 -->
-    <PopBase v-show="isShow" :show="isShow" :className="'personal'">
+    <PopBase v-show="isShow" :show="isShow" :class-name="'personal'">
       <!-- 기본틀가지고 있는 팝업 사용 예시 -->
       <template #header>
         <img :src="`${imageUrl}/tit_personal.png`" alt="개인정보 입력" />
       </template>
       <template #content>
         <PersonalForm
-          ref="event1Personal"
           :id="'personal'"
+          ref="event1Personal"
           :key="forceUpdate"
-          :eventName="$store.state.singleEssence.eventName"
-          :infoUrl="true"
-          :defaultUrlText="true"
-          :phoneCorpAuth="true"
-          :closeOnClickMask="true"
+          :event-name="$store.state.singleEssence.eventName"
+          :info-url="true"
+          :default-url-text="true"
+          :phone-corp-auth="true"
+          :close-on-click-mask="true"
           :agreement="{
             list: [
               {
@@ -36,11 +36,11 @@
       </template>
       <template #footer>
         <button
-          @click="sendUserModel"
           type="button"
           class="popupBtn popup__btn--complete"
           data-gtm-category="EVENT 01 3단계"
           data-gtm-action="개인정보 입력_완료"
+          @click="sendUserModel"
         >
           신청완료
         </button>
@@ -58,11 +58,10 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
 import PopBase from '@/components/shared/PopBase'
 import PersonalForm from '@/components/shared/PersonalForm'
 import AbovePop from '@/components/singleEssence/AbovePopAgreement'
-
-import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'PopPersonal',

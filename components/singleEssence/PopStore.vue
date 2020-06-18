@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- type종류 empty:빈팝업 -->
-    <PopBase v-show="isShow" :show="isShow" :className="'popStore'">
+    <PopBase v-show="isShow" :show="isShow" :class-name="'popStore'">
       <template #header>
         <img :src="`${imageUrl}/tit_store.png`" alt="싱글에센스 구매하러가기" />
       </template>
@@ -20,16 +20,16 @@
       </template>
       <template #footer>
         <button
-          @click="closePop"
           type="button"
           class="popupBtn popupBtn__close--full popupBtn--full"
+          @click="closePop"
         >
           닫기
         </button>
       </template>
 
       <template #closeButton>
-        <button @click="closePop" type="button" class="popupBtn__close">
+        <button type="button" class="popupBtn__close" @click="closePop">
           닫기
         </button>
       </template>
@@ -38,9 +38,8 @@
 </template>
 
 <script>
-import PopBase from '@/components/shared/PopBase'
-
 import { mapState, mapActions } from 'vuex'
+import PopBase from '@/components/shared/PopBase'
 
 export default {
   name: 'PopStore',

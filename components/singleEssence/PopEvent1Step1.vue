@@ -2,7 +2,7 @@
   <PopBase
     v-show="isShow"
     :show="isShow"
-    :className="'event1Step1'"
+    :class-name="'event1Step1'"
     :mask="true"
     :class="{ on: currentPop == 'PopEvent1Step1' }"
     class="popup_event1Step1"
@@ -24,9 +24,9 @@
       />
 
       <button
-        @click="openPop({ popName: 'PopEvent1Step2' })"
         :class="{ on: userSelect.tit }"
         class="popupBtn popupBtn__nextStep"
+        @click="openPop({ popName: 'PopEvent1Step2' })"
       >
         다음단계
       </button>
@@ -34,9 +34,9 @@
 
     <template #closeButton>
       <button
-        @click="closePop"
         type="button"
         class="popupBtn__close popupBtn__close-b"
+        @click="closePop"
       >
         닫기
       </button>
@@ -45,9 +45,8 @@
 </template>
 
 <script>
-import PopBase from '@/components/shared/PopBase'
-
 import { mapState, mapActions } from 'vuex'
+import PopBase from '@/components/shared/PopBase'
 
 export default {
   name: 'PopAlert',

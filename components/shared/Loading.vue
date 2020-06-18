@@ -6,9 +6,8 @@
 </template>
 
 <script>
-import LoadingIcon from '@/components/shared/LoadingIcon'
-
 import { mapState, mapActions } from 'vuex'
+import LoadingIcon from '@/components/shared/LoadingIcon'
 
 export default {
   components: { LoadingIcon },

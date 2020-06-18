@@ -2,7 +2,7 @@
   <PopBase
     v-show="isShow"
     :show="isShow"
-    :className="'alert'"
+    :class-name="'alert'"
     :mask="true"
     class="popup_alert"
   >
@@ -27,9 +27,9 @@
 
     <template #footer>
       <button
-        @click="eventEnd(popAlertParam)"
         type="button"
         class="popupBtn popupBtn__close--full popupBtn--full"
+        @click="eventEnd(popAlertParam)"
       >
         완료닫기
       </button>
@@ -37,9 +37,9 @@
 
     <template #closeButton>
       <button
-        @click="eventEnd(popAlertParam)"
         type="button"
         class="popupBtn__close"
+        @click="eventEnd(popAlertParam)"
       >
         완료닫기
       </button>
@@ -48,8 +48,8 @@
 </template>
 
 <script>
-import PopBase from '@/components/shared/PopBase'
 import { mapState, mapActions } from 'vuex'
+import PopBase from '@/components/shared/PopBase'
 export default {
   name: 'PopAlert',
   components: { PopBase },

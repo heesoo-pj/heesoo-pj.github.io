@@ -2,7 +2,7 @@
   <PopBase
     v-show="isShow"
     :show="isShow"
-    :className="'event1Step2'"
+    :class-name="'event1Step2'"
     :mask="true"
     class="popup_event1Step2"
   >
@@ -18,9 +18,9 @@
           v-for="list in selectList"
           :key="list.tit"
           :class="{ on: userSelect.number == list.number }"
-          @click="eventStep2Select(list)"
           :data-gtm-action="list.gtmStepTwo"
           data-gtm-category="EVENT 01 2단계"
+          @click="eventStep2Select(list)"
         >
           {{ list.tit }}
         </li>
@@ -28,10 +28,10 @@
       <Graph v-if="currentPop === 'PopEvent1Step2'" />
 
       <button
-        @click="openPop({ popName: 'PopPersonal' })"
         class="popupBtn popupBtn__event1Join"
         data-gtm-category="EVENT 01 2단계"
         data-gtm-action="신청하기"
+        @click="openPop({ popName: 'PopPersonal' })"
       >
         신청하기
       </button>
@@ -39,9 +39,9 @@
 
     <template #closeButton>
       <button
-        @click="closePop"
         type="button"
         class="popupBtn__close popupBtn__close-b"
+        @click="closePop"
       >
         닫기
       </button>
@@ -50,11 +50,10 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
 import PopBase from '@/components/shared/PopBase'
 import Graph from '@/components/singleEssence/Graph'
 // import { EventBus } from '@/plugins/EventBus'
-
-import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'PopAlert',

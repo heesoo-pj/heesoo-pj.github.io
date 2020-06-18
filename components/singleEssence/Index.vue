@@ -11,7 +11,7 @@
         <h2 class="a11y">
           정관장 홍삼, 단 하나로 <b>어린빛 맑은 피부를 깨우다.</b>
         </h2>
-        <span @click="goSection('#video')" class="floating visual_scroll"
+        <span class="floating visual_scroll" @click="goSection('#video')"
           ><img :src="imageUrl + '/icon_scroll.png'" alt="scroll down"
         /></span>
       </div>
@@ -23,33 +23,33 @@
         <h2 class="a11y">VIDEO</h2>
         <div class="videoShared__tab">
           <button
-            @click="videoChange('tvc')"
             :class="{ on: videoTabOn == 'tvc' }"
             class="videoShared__tab01"
             type="button"
             data-gtm-category="영상선택"
             data-gtm-action="영상_TVC"
+            @click="videoChange('tvc')"
           >
             TVC
           </button>
 
           <button
-            @click="videoChange('digital')"
             :class="{ on: videoTabOn == 'digital' }"
             class="videoShared__tab02"
             type="button"
             data-gtm-category="영상선택"
             data-gtm-action="영상_Digital_A"
+            @click="videoChange('digital')"
           >
             DIGITAL
           </button>
           <button
-            @click="videoChange('digital_b')"
             :class="{ on: videoTabOn == 'digital_b' }"
             class="videoShared__tab03"
             type="button"
             data-gtm-category="영상선택"
             data-gtm-action="영상_Digital_B"
+            @click="videoChange('digital_b')"
           >
             TVC
           </button>
@@ -58,50 +58,50 @@
         <div class="videoShared__wrap">
           <youtube
             ref="youtube"
-            @ready="ready"
-            @playing="playing"
-            @ended="ended"
             :video-id="videoId"
             :player-vars="playerVars"
             class="youtube"
             width="100%"
             height="100%"
+            @ready="ready"
+            @playing="playing"
+            @ended="ended"
           ></youtube>
           <transition name="fade">
             <div
               v-show="playState !== 1"
-              @click="play()"
               :class="videoTabOn"
               class="video__cover"
+              @click="play()"
             ></div>
           </transition>
         </div>
         <!-- 공유버튼 -->
         <div class="share_btnWarp">
           <button
-            @click="facebookShare"
             class="btn__share btn__facebook"
             type="button"
             data-gtm-category="공유하기"
             data-gtm-action="공유하기_FB"
+            @click="facebookShare"
           >
             페이스북 공유
           </button>
           <button
-            @click="kakaoShare"
             class="btn__share btn__kakao"
             type="button"
             data-gtm-category="공유하기"
             data-gtm-action="공유하기_카톡"
+            @click="kakaoShare"
           >
             카카오톡 공유
           </button>
           <button
-            @click="copyUrl('url')"
             class="btn__share btn__copy"
             type="button"
             data-gtm-category="공유하기"
             data-gtm-action="공유하기_링크"
+            @click="copyUrl('url')"
           >
             url복사
           </button>
@@ -139,9 +139,9 @@
                 v-for="list in selectList"
                 :key="list.tit"
                 :class="{ on: userSelect == list }"
-                @click="showEvent1Select(list)"
                 :data-gtm-action="eventStep == 'step1' ? list.gtmStepOne : ''"
                 data-gtm-category="EVENT 01 1단계"
+                @click="showEvent1Select(list)"
               >
                 {{ list.tit }}
               </li>
@@ -160,11 +160,11 @@
             </div>
 
             <button
-              @click="eventCheck()"
               :class="{ on: userSelect.tit }"
               class="btn btn__kit"
               data-gtm-category="EVENT 01 1단계"
               data-gtm-action="샘플신청"
+              @click="eventCheck()"
             >
               2주 체험kit 신청하기
             </button>
@@ -175,9 +175,9 @@
       <!-- step2  -->
       <transition name="fade">
         <section
-          ref="eventStep2"
           v-if="deviceKind == 'pc'"
           v-show="eventStep == 'step2'"
+          ref="eventStep2"
           class="eventStep2"
         >
           <div v-if="eventStep == 'step2'" class="section__inner">
@@ -192,12 +192,12 @@
             </p>
             <Graph />
             <button
-              @click="
-                openPop({ popName: 'PopPersonal', popPos: eventOffsetTop })
-              "
               class="btn btn__event1Join"
               data-gtm-category="EVENT 01 2단계"
               data-gtm-action="신청하기"
+              @click="
+                openPop({ popName: 'PopPersonal', popPos: eventOffsetTop })
+              "
             >
               신청하기
             </button>
@@ -207,9 +207,9 @@
                 v-for="list in selectList"
                 :key="list.tit"
                 :class="{ on: userSelect == list }"
-                @click="eventStep2Select(list)"
                 :data-gtm-action="eventStep == 'step2' ? list.gtmStepTwo : ''"
                 data-gtm-category="EVENT 01 2단계"
+                @click="eventStep2Select(list)"
               >
                 {{ list.tit }}
               </li>
@@ -220,7 +220,7 @@
               alt=""
             />
           </div>
-          <button @click="eventRetrun" type="button" class="btn btn__retrun">
+          <button type="button" class="btn btn__retrun" @click="eventRetrun">
             이벤트 되돌아가기
           </button>
         </section>
@@ -259,11 +259,11 @@
           </p>
         </div>
         <button
-          @click="copyUrl('hash')"
           type="button"
           class="btn btn__hashCopy"
           data-gtm-category="EVENT 02"
           data-gtm-action="해시태그 복사"
+          @click="copyUrl('hash')"
         >
           필수 해시태그 복사
         </button>
@@ -279,11 +279,11 @@
         >
         <button
           v-else
-          @click="instaAppGo()"
           class="btn btn__reviewJoin"
           type="button"
           data-gtm-category="EVENT 02"
           data-gtm-action="인스타 바로가기"
+          @click="instaAppGo()"
         >
           인스타그램 바로가기
         </button>
@@ -333,11 +333,11 @@
           </div>
 
           <button
-            @click="openPop({ popName: 'PopStore' })"
             type="button"
             class="btn btn__buy"
             data-gtm-category="제품구매"
             data-gtm-action="구매하기"
+            @click="openPop({ popName: 'PopStore' })"
           >
             구매하기
           </button>
@@ -513,6 +513,7 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex'
 import Nav from '@/components/singleEssence/Nav'
 import Graph from '@/components/singleEssence/Graph'
 import PopPersonal from '@/components/singleEssence/PopPersonal'
@@ -524,7 +525,6 @@ import PopPost from '@/components/singleEssence/PopPost'
 import PopStore from '@/components/singleEssence/PopStore'
 import Loading from '@/components/shared/Loading'
 import { youtubeEmbedMixin } from '@/plugins/youtubeMixin'
-import { mapActions, mapState } from 'vuex'
 
 export default {
   name: 'SingleEssence',
