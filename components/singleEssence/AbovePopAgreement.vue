@@ -2,19 +2,19 @@
   <PopBase
     v-show="isShow"
     :show="isShow"
-    :className="'agreement'"
+    :class-name="'agreement'"
     :mask="false"
     class="popup__agree"
   >
     <template #header>
       <img
-        :src="`${imageUrl}/tit-agreement.png`"
         v-show="currentAgree === 'agree0'"
+        :src="`${imageUrl}/tit-agreement.png`"
         alt="개인정보 수집 및 이용에 대한 동의"
       />
       <img
-        :src="`${imageUrl}/tit-agreement2.png`"
         v-show="currentAgree === 'agree1'"
+        :src="`${imageUrl}/tit-agreement2.png`"
         alt="개인정보 처리 위탁에 대한 동의"
       />
     </template>
@@ -73,16 +73,16 @@
 
     <template #footer>
       <button
-        @click="close"
         type="button"
         class="popupBtn popupBtn__close--full popupBtn--full"
+        @click="close"
       >
         닫기
       </button>
     </template>
 
     <template #closeButton>
-      <button @click="close" type="button" class="popupBtn__close">
+      <button type="button" class="popupBtn__close" @click="close">
         닫기
       </button>
     </template>
@@ -90,9 +90,8 @@
 </template>
 
 <script>
-import PopBase from '@/components/shared/PopBase'
-
 import { mapState } from 'vuex'
+import PopBase from '@/components/shared/PopBase'
 
 export default {
   name: 'PopAgreement',

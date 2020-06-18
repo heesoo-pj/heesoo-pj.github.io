@@ -2,28 +2,28 @@
   <form @submit.prevent>
     <div class="info__group">
       <div
-        :style="{ order: `${order[0]}` }"
         v-if="infoDefault === true"
+        :style="{ order: `${order[0]}` }"
         class="info__item info__name d--flex"
       >
         <!-- 이름 -->
         <label :for="`${id}InfoName`">이름</label>
         <input
           :id="`${id}InfoName`"
-          :disabled="userModel.isKmcAuthComplete"
           v-model="userModel.name"
+          :disabled="userModel.isKmcAuthComplete"
           type="text"
           name="name"
         />
 
         <!-- 통신사 선택 -->
         <select
-          id="phoneCorp"
-          @change="changeCorp($event)"
-          :disabled="userModel.isKmcAuthComplete"
           v-if="phoneCorpAuth === true"
+          id="phoneCorp"
+          :disabled="userModel.isKmcAuthComplete"
           name="phoneCorp"
           class="phone__corp"
+          @change="changeCorp($event)"
         >
           <option value="" selected disabled>통신사 선택</option>
           <option value="SKT">SKT</option>
@@ -36,8 +36,8 @@
       </div>
 
       <div
-        :style="{ order: `${order[1]}` }"
         v-if="infoDefault === true"
+        :style="{ order: `${order[1]}` }"
         class="info__item info__phone"
       >
         <!-- 연락처 -->
@@ -53,10 +53,10 @@
             placeholder="'-' 없이 입력해주세요"
           />
           <button
-            @click="sendKmcAuth()"
             v-if="phoneCorpAuth === true && !userModel.isKmcAuthComplete"
             type="button"
             class="popupBtn popupBtn__phoneAuth"
+            @click="sendKmcAuth()"
           >
             인증번호 발송
           </button>
@@ -75,10 +75,10 @@
             placeholder="인증번호를 입력해주세요"
           />
           <button
-            @click="confirmKmcAuth()"
             v-if="phoneCorpAuth === true"
             type="button"
             class="popupBtn popupBtn__phoneAuth--complete"
+            @click="confirmKmcAuth()"
           >
             인증번호 확인
           </button>
@@ -86,8 +86,8 @@
       </div>
       <!-- url -->
       <div
-        :style="{ order: `${order[3]}` }"
         v-if="infoUrl === true"
+        :style="{ order: `${order[3]}` }"
         class="info__item info__url d--flex"
       >
         <div class="d--flex">
@@ -107,8 +107,8 @@
       </div>
       <!-- 주소 -->
       <div
-        :style="{ order: `${order[4]}` }"
         v-if="infoAddress === true"
+        :style="{ order: `${order[4]}` }"
         class="info__item info__address d--flex"
       >
         <div class="d--flex">
@@ -122,9 +122,9 @@
             class="zipcode__input"
           />
           <button
-            @click="openPop({ popName: 'post' })"
             type="button"
             class="popupBtn popupBtn__zipcode"
+            @click="openPop({ popName: 'post' })"
           >
             우편번호찾기
           </button>
@@ -190,9 +190,9 @@
         <label :for="`${id}Agree${idx}`">
           <input
             :id="`${id}Agree${idx}`"
+            v-model="userModel[agree.name]"
             :name="agree.name"
             :value="agree.agree"
-            v-model="userModel[agree.name]"
             type="checkbox"
           />
           <i
@@ -225,10 +225,10 @@
           ><span class="a11y">{{ agree.txt }}</span> 자세히 보기</a
         >
         <button
-          @click="$emit('openAbovePop', agree.agreePopName)"
           v-else
           :class="{ fs0: agreement.type === 'img' }"
           class="popupBtn__agreeDetail "
+          @click="$emit('openAbovePop', agree.agreePopName)"
         >
           <span class="a11y">{{ agree.txt }}</span
           >자세히 보기

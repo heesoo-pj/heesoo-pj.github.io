@@ -1,5 +1,5 @@
 <template>
-  <PopBase v-show="isShow" :show="isShow" :className="popName">
+  <PopBase v-show="isShow" :show="isShow" :class-name="popName">
     <template #header>
       <slot name="header">
         <h1>우편번호 찾기 기본 타이틀</h1>
@@ -16,8 +16,8 @@
     <template #closeButton>
       <slot name="closeButton">
         <button
-          @click="openPop({ popName: 'personalAddress' })"
           class="popupBtn__close"
+          @click="openPop({ popName: 'personalAddress' })"
         ></button>
       </slot>
     </template>
@@ -25,9 +25,9 @@
 </template>
 
 <script>
-import PopBase from '@/components/shared/PopBase'
 import DaumPostcode from 'vuejs-daum-postcode'
 import { mapActions, mapState } from 'vuex'
+import PopBase from '@/components/shared/PopBase'
 
 export default {
   name: 'PopPost',

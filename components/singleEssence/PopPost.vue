@@ -1,6 +1,6 @@
 <template>
   <PopPost
-    :eventName="$store.state.singleEssence.eventName"
+    :event-name="$store.state.singleEssence.eventName"
     @complete="complete"
   >
     <template #header>
@@ -9,17 +9,16 @@
 
     <template #closeButton>
       <button
-        @click="openPop({ popName: 'PopPersonal' })"
         class="popupBtn__close"
+        @click="openPop({ popName: 'PopPersonal' })"
       ></button>
     </template>
   </PopPost>
 </template>
 
 <script>
-import PopPost from '@/components/shared/PopPost'
-
 import { mapState, mapActions } from 'vuex'
+import PopPost from '@/components/shared/PopPost'
 
 export default {
   name: 'PopPostSemester',

@@ -1,0 +1,169 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url("https://fonts.googleapis.com/css?family=Titan+One");
+
+
+.menu-container {
+  background-color: #ffc901;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: -120px;
+  top: -120px;
+	transition: all 0.3s;
+
+	&.on {
+		border-radius: 0;
+		padding: 0 !important;
+		position: aboslute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		transition: all 0.3s;
+
+		.menu {
+			top: 40px;
+			left: 40px;
+		}
+	}
+}
+
+
+.menu {
+  color: white;
+  font-size: 3.5em;
+  position: absolute;
+  top: 160px;
+  left: 160px;
+  z-index: 100;
+	transition: all 0.3s;
+	i {
+		opacity: 0.7;
+		transform: scale(1);
+		transition: all 0.3s;
+
+		&:hover {
+			opacity: 1;
+			transform: scale(1.2);
+			transition: all 0.3s;
+		}
+	}
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+	overflow: hidden;
+	&.on{
+		opacity: .9;
+		visibility: visible;
+		height: 100%;
+
+		li {
+			animation: fadeInRight .5s ease forwards;
+			animation-delay: .35s;
+
+			&:nth-of-type(2){
+				animation-delay: .4s;
+			}
+			&:nth-of-type(3){
+				animation-delay: .45s;
+			}
+			&:nth-of-type(4){
+				animation-delay: .50s;
+			}
+		}
+	}
+
+	nav {
+		font-size: 3.2em;
+		font-family: "Titan One", san-serif;
+		position: relative;
+		height: 70%;
+		top: 50%;
+		transform: translateY(-50%);
+		font-weight: 400;
+		text-align: center;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0 auto;
+		display: inline-block;
+		position: relative;
+		height: 100%;
+	}
+	li {
+		display: block;
+		height: 25%;
+		height: calc(100% / 4);
+		min-height: 50px;
+		position: relative;
+		opacity: 0;
+		a {
+			display: block;
+			position: relative;
+			color: #fff;
+			text-decoration: none;
+			overflow: hidden;
+			opacity: 0.7;
+			transform: scale(1);
+			transition: all 0.3s;
+			&:hover,
+			&:focus,
+			&:active {
+				opacity: 1;
+				transform: scale(1.2);
+				transition: all 0.3s;
+			}
+		}
+	}
+}
+
+
+
+
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes blobby {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes blobby2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+

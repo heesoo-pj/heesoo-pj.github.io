@@ -34,9 +34,9 @@
       <header>
         <button
           :class="{ on: isNavOn }"
-          @click="toggleNav"
           class="btn__hamburger"
           type="button"
+          @click="toggleNav"
         >
           <span class="btn__hamburger-box">
             <span class="btn__hamburger-inner"></span>
@@ -51,25 +51,25 @@
         class="input__virtual"
       />
       <nav class="nav" role="navigation">
-        <div @click.self="toggleNav()" class="dimm"></div>
+        <div class="dimm" @click.self="toggleNav()"></div>
         <div class="nav__inner">
           <a
             v-for="nav in navList"
+            :key="nav.name"
             :class="{ on: currentSection == nav.name }"
             :href="nav.name"
-            :key="nav.name"
-            @click.prevent="goSection('#' + nav.name, true)"
             class="nav__btn"
+            @click.prevent="goSection('#' + nav.name, true)"
           >
             {{ nav.title }}
           </a>
           <a
-            @click.prevent="openPop({ popName: 'PopStore' })"
             class="nav__btn"
             href="#"
             target="_blank"
             data-gtm-category="제품구매"
             data-gtm-action="구매하기"
+            @click.prevent="openPop({ popName: 'PopStore' })"
             >구매하기</a
           >
         </div>
