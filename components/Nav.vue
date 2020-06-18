@@ -33,20 +33,10 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   methods: {
-    goPage(url) {
-      // const elmOverlay = document.querySelector('.shape-overlays')
-      // elmOverlay.addEventListener(
-      //   'transitionend',
-      //   () => (window.location = url)
-      // )
-      setTimeout(() => {
-        window.location = url
-      }, 5000)
-      return false
-    },
     toggleNav() {
       const menuItems = document.querySelector('#overlay')
       const menuContainer = document.querySelector('.menu-container')
