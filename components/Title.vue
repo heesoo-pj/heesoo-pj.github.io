@@ -1,5 +1,16 @@
 <template>
   <div>
+    <!-- <svg>
+      <defs>
+        <mask id="maskTitle">
+          <text class="title" x="200" y="200" fill="#fff">I love SVG!</text>
+        </mask>
+      </defs>
+
+      <g mask="url(#maskTitle)">
+        <rect class="bg" x="0" y="0" width="100%" height="100%" />
+      </g>
+    </svg> -->
     <h1 class="title">ROBERT DEVELOPER</h1>
     <p class="subtitle">
       geek + smart + curious + nerd + ingenious + cunning = ME
@@ -14,10 +25,27 @@ export default {
   created() {},
   mounted() {
     if (process.browser) {
-      window.onNuxtReady((app) => {})
+      window.onNuxtReady((app) => {
+        document.body.addEventListener('mousemove', (e) => {
+          this.titleMotion(e)
+        })
+      })
     }
   },
-  methods: {}
+  methods: {
+    titleMotion(e) {
+      let mouseX = 0
+      let mouseY = 0
+      let traX = 0
+      let traY = 0
+      mouseX = e.pageX
+      mouseY = e.pageY
+      traX = (4 * mouseX) / 570 + 40
+      traY = (4 * mouseY) / 570 + 50
+      document.querySelector('.title').style.backgroundPosition =
+        traX + '%' + traY + '%'
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -64,5 +92,16 @@ body{
   text-align: center;
   text-transform: uppercase;
   padding-top:10px;
+}
+
+.bg{
+  position: absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+   background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
 }
 </style>
