@@ -38,7 +38,6 @@ export default {
   methods: {
     goPage(url) {
       // const elmOverlay = document.querySelector('.shape-overlays')
-
       // elmOverlay.addEventListener(
       //   'transitionend',
       //   () => (window.location = url)
