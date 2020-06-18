@@ -43,10 +43,10 @@ body{
   height: 100%;
   font-family: 'Raleway', sans-serif;
 }
-.container{
-  position:absolute;
-  @include center();
-}
+// .container{
+//   position:absolute;
+//   @include center();
+//}
 .title{
   font-weight: 800;
   color: transparent;
