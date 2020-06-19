@@ -9,8 +9,8 @@
     <div id="overlay" class="overlay">
       <nav class="overlay-menu">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Tour</a></li>
+          <li><nuxt-link to="/index">Main</nuxt-link></li>
+          <li><a href="/introduction">Introduction</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
