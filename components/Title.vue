@@ -25,7 +25,7 @@
       </svg>
     </h1>-->
 
-    <h1 class="title">ROBERT DEVELOPER</h1>
+    <h1 class="title">LEE HEE SOO PORTFOLIO</h1>
     <p class="subtitle">
       geek + smart + curious + nerd + ingenious + cunning = ME
     </p>
@@ -97,12 +97,12 @@ body{
   font-weight: 800;
   color: transparent;
   font-size:120px;
-  background: url("@/assets/images/titleBg.jpg") repeat;
+  background: url("../assets/images/titleBg.jpg") repeat;
   background-position: 40% 50%;
   background-clip: text;
   position:relative;
   text-align:center;
-  line-height:90px;
+  line-height:100px;
   letter-spacing: -8px;
 
   // fill: url(#splash);
