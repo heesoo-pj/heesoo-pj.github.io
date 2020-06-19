@@ -1,22 +1,7 @@
 <template>
   <div class="mainNav">
-    <!-- hamburger -->
-    <!-- <div class="hamburger">
-      <span class="hamburger__line"></span>
-      <span class="hamburger__line"></span>
-      <span class="hamburger__line"></span>
-    </div>
-    <div class="global-menu">
-      <div class=" global-menu__wrap">
-        <nuxt-link to="/donginbi">동인비</nuxt-link>
-      </div>
-    </div> -->
-
-    <div id="toggle" class="menu-container">
-      <!-- <a href="#" class="menu" @click="toggleNav()"
-          ><i class="fa fa-bars" aria-hidden="true"></i
-        ></a> -->
-      <button type="button" class="menu" @click="toggleNav()">
+    <div id="toggle" class="menu-container" @click="toggleNav()">
+      <button type="button" class="menu">
         <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
     </div>
