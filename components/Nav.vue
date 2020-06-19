@@ -9,10 +9,9 @@
     <div id="overlay" class="overlay">
       <nav class="overlay-menu">
         <ul>
-          <li><nuxt-link to="/index">Main</nuxt-link></li>
-          <li><a href="/introduction">Introduction</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><nuxt-link to="/">Main</nuxt-link></li>
+          <li><nuxt-link to="/introduction">Introduction</nuxt-link></li>
+          <li><nuxt-link to="/project">Project</nuxt-link></li>
         </ul>
       </nav>
     </div>
@@ -24,9 +23,11 @@ export default {
   methods: {
     toggleNav() {
       const menuItems = document.querySelector('#overlay')
+      const mainWarp = document.querySelector('.mainNav')
       const menuContainer = document.querySelector('.menu-container')
       const menuIcon = document.querySelector('i')
 
+      mainWarp.classList.toggle('on')
       menuItems.classList.toggle('on')
       menuContainer.classList.toggle('on')
       menuIcon.classList.toggle('fa-bars')

@@ -97,7 +97,7 @@ body{
   font-weight: 800;
   color: transparent;
   font-size:120px;
-  background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+  background: url("@/assets/images/titleBg.jpg") repeat;
   background-position: 40% 50%;
   background-clip: text;
   position:relative;
