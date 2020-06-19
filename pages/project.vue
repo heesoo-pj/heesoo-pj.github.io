@@ -1,16 +1,16 @@
 <template>
   <div class="container">
     <Nav />
-    <Title />
   </div>
 </template>
 
 <script>
+// 동인비 , vw, 멸종동물, 스마트카라 유지보수, 베비언스, 쌤소나이트 , 펜타클
+// https://www.kabrita.kr/
+// https://www.event-donginbi.co.kr/mimaskstick/
 import Nav from '@/components/Nav'
-import Title from '@/components/Title'
-
 export default {
-  components: { Title, Nav },
+  components: { Nav },
   computed: {},
   methods: {},
   head() {

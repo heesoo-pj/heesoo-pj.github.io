@@ -1,16 +1,16 @@
 <template>
   <div class="container">
     <Nav />
-    <Title />
+    <Panels />
   </div>
 </template>
 
 <script>
 import Nav from '@/components/Nav'
-import Title from '@/components/Title'
+import Panels from '@/components/Panels'
 
 export default {
-  components: { Title, Nav },
+  components: { Panels, Nav },
   computed: {},
   methods: {},
   head() {
