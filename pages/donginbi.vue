@@ -528,10 +528,7 @@ import { youtubeEmbedMixin } from '@/plugins/youtubeMixin'
 
 export default {
   name: 'SingleEssence',
-  layoutTransition: {
-    name: 'layout',
-    mode: 'out-in'
-  },
+
   components: {
     Nav,
     Graph,

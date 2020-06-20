@@ -27,7 +27,7 @@
 
     <h1 class="title">LEE HEE SOO PORTFOLIO</h1>
     <p class="subtitle">
-      geek + smart + curious + nerd + ingenious + cunning = ME
+      웹퍼블리셔 이희수 포트폴리오 사이트 입니다 :)
     </p>
   </div>
 </template>
@@ -64,7 +64,7 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scope>
 @mixin center(){
   transform: translate(-50%,-50%);
   left:50%;
@@ -112,6 +112,8 @@ body{
   display: block;
   text-align: center;
   text-transform: uppercase;
-  padding-top:10px;
+  font-size:20px;
+  padding-top:20px;
+ font-family: 'Noto Sans KR', sans-serif;
 }
 </style>

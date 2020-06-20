@@ -11,6 +11,10 @@ import Panels from '@/components/Panels'
 
 export default {
   components: { Panels, Nav },
+  layoutTransition: {
+    name: 'layout',
+    mode: 'out-in'
+  },
   computed: {},
   methods: {},
   head() {

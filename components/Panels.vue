@@ -6,10 +6,12 @@
       @click="openPanels('left')"
     >
       <div class="panels__side panels__side--inner-left">
-        <p></p>
+        <p>
+          이름,생년,주소지, 경력사항
+        </p>
       </div>
       <div class="panels__side panels__side--inner">
-        <h1 class="panels__headline">Info</h1>
+        <h1 class="panels__headline">Profile</h1>
         <svg
           class="arrow arrow--left"
           width="40"
@@ -31,7 +33,9 @@
       @click="openPanels('right')"
     >
       <div class="panels__side panels__side--inner">
-        <h1 class="panels__headline">Skill</h1>
+        <h1 class="panels__headline">
+          Self <input id="" type="checkbox" name="" />
+        </h1>
         <svg
           class="arrow arrow--right"
           width="40"
@@ -344,14 +348,14 @@ body {
   transform: translate(0, 0);
 }
 .panels__side--left {
-  background: #f4d03f;
+  background: #fdc23e;
 }
 .panels__side--left:hover .arrow {
   -webkit-transform: translate(-100%, -50%);
   transform: translate(-100%, -50%);
 }
 .panels__side--right {
-  background: #19b5fe;
+  background: #f9a11b;
 }
 .panels__side--right:hover .arrow {
   -webkit-transform: translate(0, -50%);
