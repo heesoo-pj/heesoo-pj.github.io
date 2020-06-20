@@ -40,9 +40,11 @@ export default {
   mounted() {
     if (process.browser) {
       window.onNuxtReady((app) => {
-        document.body.addEventListener('mousemove', (e) => {
-          this.titleMotion(e)
-        })
+        document
+          .querySelector('.main__wrap')
+          .addEventListener('mousemove', (e) => {
+            this.titleMotion(e)
+          })
       })
     }
   },
@@ -65,55 +67,52 @@ export default {
 }
 </script>
 <style lang="scss" scope>
-@mixin center(){
-  transform: translate(-50%,-50%);
-  left:50%;
-  top:50%;
+@mixin center() {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
 }
 
-
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
-html{
-  width:100%;
+html {
+  width: 100%;
   height: 100%;
 }
-body{
-  background: -webkit-linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
+body {
   background: linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
   margin: 0;
   width: 100%;
   height: 100%;
   font-family: 'Raleway', sans-serif;
 }
-.title-wrap{
-  position:absolute;
+.title-wrap {
+  position: absolute;
   @include center();
 }
 
-.maskbg{
+.maskbg {
   mask: url(#maskTitle);
 }
-.title{
+.title {
   font-weight: 800;
   color: transparent;
-  font-size:120px;
-  background: url("../assets/images/titleBg.jpg") repeat;
+  font-size: 120px;
+  background: url('../assets/images/titleBg.jpg') repeat;
   background-position: 40% 50%;
   background-clip: text;
-  position:relative;
-  text-align:center;
-  line-height:100px;
+  position: relative;
+  text-align: center;
+  line-height: 100px;
   letter-spacing: -8px;
 
   // fill: url(#splash);
   // color: rgba(#000, 0.5)
 }
-.subtitle{
+.subtitle {
   display: block;
   text-align: center;
   text-transform: uppercase;
-  font-size:20px;
-  padding-top:20px;
- font-family: 'Noto Sans KR', sans-serif;
+  font-size: 20px;
+  padding-top: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 </style>

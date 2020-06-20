@@ -26,11 +26,12 @@ export default {
     script: [],
     // TODO : favicon 설정
     link: [
-      //   {
-      //   rel: 'icon',
-      //   type: 'image/x-icon',
-      //   href: '/favicon.ico'
-      // }
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href:
+          'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap'
+      },
       {
         rel: 'icon',
         type: 'image/png',
@@ -89,6 +90,14 @@ export default {
     '@nuxtjs/device',
     'nuxt-clipboard2'
   ],
+  module: {
+    rules: [{
+      test: /\.(png|jpe?g|gif)$/i,
+      use: [{
+        loader: 'file-loader',
+      }, ],
+    }, ],
+  },
 
   /*
    ** Axios module configuration
@@ -132,35 +141,5 @@ export default {
       })
     ],
     transpile: ['nano-loader', 'vue-daum-postcode']
-  },
-  proxy: {
-    '/api/': {
-      target: 'http://localhost:8080/api',
-      pathRewrite: {
-        '^/api/': ''
-      },
-      changeOrigin: true
-    },
-    '/cognito-manager/': {
-      target: 'http://localhost:8080/cognito-manager/',
-      pathRewrite: {
-        '^/cognito-manager/': ''
-      },
-      changeOrigin: true
-    },
-    '/manager/': {
-      target: 'http://localhost:8080/manager/',
-      pathRewrite: {
-        '^/manager/': ''
-      },
-      changeOrigin: true
-    },
-    '/user-check-ad': {
-      target: 'http://localhost:8080/user-check-ad',
-      pathRewrite: {
-        '^/user-check-ad': ''
-      },
-      changeOrigin: true
-    }
   }
 }

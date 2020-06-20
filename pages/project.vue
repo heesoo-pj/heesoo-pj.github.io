@@ -7,6 +7,8 @@
         {{ pf.title }}
       </li>
     </ul>
+
+    <!-- POPUP -->
     <transition name="fade">
       <div v-show="popupOn" class="popup__wrap">
         <div class="popup">
@@ -74,7 +76,7 @@ export default {
           role: '100%',
           txt:
             '폭스바겐 투아렉 런칭 프로모션 페이지입니다.<br>( 작업기간 PC, MO : 3주 )',
-          img: '../assets/images/pf/1.jpg'
+          img: '/images/pf/vw.png'
         },
         {
           id: 1,
@@ -86,7 +88,7 @@ export default {
           role: '100%',
           txt:
             '개인정보 입력 후 즉석당첨 이벤트를 참여하여 결과를 확인하는 페이지 입니다.<br>( 작업기간 PC, MO : 2주 )',
-          img: ''
+          img: '/images/pf/donginbi.png'
         },
         {
           id: 2,
@@ -97,17 +99,17 @@ export default {
           role: '100%',
           txt:
             '베비언스 카브리타 마이크로사이트 입니다.<br>설문조사, OX퀴즈 이벤트 페이지로 구성되어 있습니다.<br>( 작업기간 PC, MO : 3주 )',
-          img: ''
+          img: '/images/pf/kabrita.png'
         },
         {
           id: 3,
-          title: '펜타클',
-          url: '',
+          title: '펜타클 자사 홈페이지',
+          url: 'https://www.pentacle.co.kr/',
           sourceUrl: '',
           skill: 'HTML5, CSS, Javascript, jQuery',
           role: '50%',
           txt: '펜타클 자사 홈페이지 입니다.<br>( 작업기간 : 2개월  )',
-          img: ''
+          img: '/images/pf/pentacle.png'
         },
         {
           id: 4,
@@ -119,7 +121,7 @@ export default {
           role: '100%',
           txt:
             'LG U+ 에서 진행한 모바일 전용 캠페인 페이지입니다.<br>로그인 체크 여부 확인 후 하루 한번 퀴즈를 참여하는 이벤트 입니다.<br>( 작업기간 MO : 1주 )',
-          img: ''
+          img: '/images/pf/lg.png'
         },
         {
           id: 5,
@@ -130,7 +132,7 @@ export default {
           role: '100%',
           txt:
             '스마트카라 신제품 런칭 프로모션으로<br>영상 선택에 따라 결과를 보여주는 이벤트 페이지입니다.<br>( 작업기간 PC, MO : 1주 )',
-          img: ''
+          img: '/images/pf/smartcara.png'
         }
       ],
       popupOn: false,
@@ -155,6 +157,7 @@ export default {
 .container {
   display: flex;
   align-items: center;
+  background: linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
 }
 .popup__wrap {
   display: flex;
@@ -169,38 +172,47 @@ export default {
 }
 .popup {
   position: relative;
-  width: 1100px;
+  width: 1020px;
   min-height: 500px;
   font-size: 20px;
   background: #fff;
   padding-top: 20px;
   border-radius: 5px;
+  background: linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
 
   &__inner {
-    width: 80%;
+    width: 90%;
     padding: 40px 0;
     margin: 0 auto;
   }
 
   &__img {
-    background: #000;
+    display: inline-block;
+    width: 36%;
   }
 
   h3 {
     font-size: 1.8em;
     padding-bottom: 30px;
     font-weight: bold;
+    letter-spacing: -1px;
   }
-
+  dl {
+    display: inline-block;
+    width: 61%;
+    vertical-align: top;
+  }
   dt,
   dd {
     display: inline-block;
     line-height: 30px;
+    letter-spacing: -0.5px;
+    word-break: keep-all;
   }
 
   dt {
     position: relative;
-    width: 10%;
+    width: 15%;
     margin-bottom: 10px;
     vertical-align: top;
     &::before {
@@ -215,18 +227,19 @@ export default {
 
   dd {
     width: 79%;
+    font-size: 0.87em;
     color: #504e4e;
   }
 
   .btn__wrap {
-    margin-top: 80px;
-    text-align: right;
+    /* margin-top: 80px; */
+    text-align: left;
   }
   .btn {
     cursor: pointer;
     &__close {
       position: absolute;
-      right: -20px;
+      right: 0;
       top: -60px;
       width: 50px;
       height: 50px;

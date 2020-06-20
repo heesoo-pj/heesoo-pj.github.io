@@ -9,6 +9,15 @@
         <p>
           이름,생년,주소지, 경력사항
         </p>
+        <ul>
+          <li>이름 : 이희수</li>
+          <li>생년월일 : 921205</li>
+          <li>주소지 : 경기도 구리시</li>
+          <li>
+            경력사항 2016.4 - 2016.10 더다함커뮤니케이션 2016.11 ~ 메가존 재직
+            중
+          </li>
+        </ul>
       </div>
       <div class="panels__side panels__side--inner">
         <h1 class="panels__headline">Profile</h1>
@@ -49,7 +58,21 @@
         </svg>
       </div>
       <div class="panels__side panels__side--inner-right">
-        <p></p>
+        <p>
+          <!-- "진취적이며 웃음이넘치는" 웹퍼블리셔 이희수입니다!
+          안녕하십니까! 이희수입니다. 
+          저는 영상디자인을 전공하고 공부했지만, 저 자신이 가진
+          장점은 창조적인 부분이 아니라 체계적이고 성실한 면이라는 것을 깨닫게
+          되었습니다. 
+          
+          저는 손에 잡히지 않는 웹사이트를 제 손으로 구현해 내는
+          것에 자부심을 느낍니다. 또한, 함께 협업하여 작업물을 만들어 내는 것에
+          보람을 갖습니다. 실무에서 많은 경험, 좋은 선임자를 만나 남들이
+          칭찬하는 일을 많이 하기보단, 남들이 싫어하는 일을 애당초 하지 않는
+          그런 구성원이 되겠습니다! 귀사에 입사하여 저의 장점을 살려 많은 것을
+          보고 경험하고 싶습니다. 함께 일하는 사람들을 위해 맡은바 최선을
+          다하여, 해내겠습니다. 감사합니다. -->
+        </p>
       </div>
     </article>
     <!-- //right -->
@@ -314,7 +337,6 @@ export default {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 body {
-  font-family: 'Montserrat';
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -330,13 +352,9 @@ body {
   width: 50%;
   -webkit-perspective: 400px;
   perspective: 400px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .panels__side--left,
@@ -344,53 +362,42 @@ body {
   will-change: transform;
   position: relative;
   left: -25%;
-  -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 .panels__side--left {
   background: #fdc23e;
 }
 .panels__side--left:hover .arrow {
-  -webkit-transform: translate(-100%, -50%);
   transform: translate(-100%, -50%);
 }
 .panels__side--right {
   background: #f9a11b;
 }
 .panels__side--right:hover .arrow {
-  -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
 .panels__side--left-active {
-  -webkit-transform: translate(50%, 0);
   transform: translate(50%, 0);
 }
 .panels__side--left-active .panels__side--inner-left {
-  -webkit-transform: rotateY(0);
   transform: rotateY(0);
 }
 .panels__side--left-active .arrow {
-  -webkit-transform: translate(-50%, -50%) rotate(180deg) !important;
   transform: translate(-50%, -50%) rotate(180deg) !important;
 }
 .panels__side--right-active {
-  -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
 .panels__side--right-active .panels__side--inner-right {
-  -webkit-transform: rotateY(0);
   transform: rotateY(0);
 }
 .panels__side--right-active .arrow {
-  -webkit-transform: translate(-50%, -50%) rotate(180deg) !important;
   transform: translate(-50%, -50%) rotate(180deg) !important;
 }
 .panels__side--left-hidden {
-  -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
 .panels__side--right-hidden {
-  -webkit-transform: translate(50%, 0);
   transform: translate(50%, 0);
 }
 .panels__side--inner {
@@ -439,15 +446,16 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #19b5fe;
+  background: #f9a11b;
   z-index: -1;
   opacity: 0.85;
 }
 .panels__headline {
   margin: 0;
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
   color: #1a1a1a;
+  font-weight: bold;
 }
 .panels p {
   font-size: 30px;
