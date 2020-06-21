@@ -124,7 +124,7 @@ export default {
           skill: 'HTML5, CSS, SCSS, Javascript, Vue.js',
           role: '100%',
           txt:
-            'LG U+ 에서 진행한 멸종동물 캠페인 모바일 페이지입니다.<br>VUE JS로 작업되었으며, 로그인 체크 여부 확인 후<br>하루 한번 퀴즈를 참여하는 이벤트 입니다.<br>[ 작업기간 MO : 1주 ]',
+            'LG U+ 에서 진행한 멸종동물 캠페인 모바일 페이지입니다.<br>VUE JS로 작업되었으며, 상단 스크롤 모션 과 로그인 체크 여부 확인 후 하루 한번 퀴즈를 참여하는 이벤트 입니다.<br>[ 작업기간 MO : 1주 ]',
           img: '/images/pf/lg.png'
         },
         {
@@ -135,7 +135,7 @@ export default {
           skill: 'HTML5, CSS, SCSS, Javascript, Vue.js (Nuxt)',
           role: '100%',
           txt:
-            'VUE NUXT로 작업 되어있으며, 스마트카라 신제품 런칭 프로모션으로<br>영상 선택에 따라 결과를 보여주는 이벤트 페이지입니다.<br>[ 작업기간 PC, MO : 1주 ]',
+            'VUE NUXT로 작업 되어있으며, 스마트카라 신제품 런칭 프로모션으로 영상 선택에 따라 결과를 보여주는 이벤트 페이지입니다.<br>[ 작업기간 PC, MO : 1주 ]',
           img: '/images/pf/smartcara.png'
         }
       ],

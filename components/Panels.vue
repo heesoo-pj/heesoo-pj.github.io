@@ -129,9 +129,9 @@
       </div>
       <div class="panels__side panels__side--inner-right">
         <p>
-          "진취적이며 웃음이 넘치는" 웹퍼블리셔 이희수입니다!<br />
+          "진취적이며 웃음이 넘치는" 웹퍼블리셔 <b>이희수</b>입니다!<br />
           홈페이지 유지 보수, 다양한 이벤트 페이지, 사이트 제작으로 누구보다
-          재미난 작업물을 많이 작업했으며, <br />그로 인한 다양한 경험을 해왔다
+          재미난 작업물을 많이 작업했으며, 그로 인한 다양한 경험을 해왔다
           자부합니다.
           <br />
           <br />
@@ -350,7 +350,7 @@ export default {
     }
   }
   .skill__wrap {
-    margin-top: 20px;
+    margin-top: 70px;
     border-top: 1px solid #33333361;
     h3 {
       font-size: 25px;
