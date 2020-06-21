@@ -97,7 +97,8 @@ export default {
           id: 'kabrita',
           title: '카브리타 마이크로사이트',
           url: 'https://www.kabrita.kr',
-          sourceUrl: '',
+          sourceUrl:
+            'https://github.com/leeheesoo/project/tree/master/lgcare-babience/src/main',
           skill: 'HTML5, CSS, SCSS, Javascript, Vue.js',
           role: '100%',
           txt:
@@ -131,7 +132,7 @@ export default {
           id: 'smartcara',
           title: '스마트카라 런칭프로모션',
           url: 'https://www.event-smartcara.com/launching',
-          sourceUrl: '',
+          sourceUrl: null,
           skill: 'HTML5, CSS, SCSS, Javascript, Vue.js (Nuxt)',
           role: '100%',
           txt:
