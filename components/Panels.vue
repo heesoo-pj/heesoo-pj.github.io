@@ -92,14 +92,27 @@
       <div class="panels__side panels__side--inner">
         <h1 class="panels__headline">Profile</h1>
         <svg
+          version="1.1"
           class="arrow arrow--left"
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
+          x="0px"
+          y="0px"
+          viewBox="0 0 368 368"
+          style="enable-background:new 0 0 368 368;"
+          xml:space="preserve"
         >
-          <path d="M0 0h24v24h-24z" fill="none" />
           <path
-            d="M20 11h-12.17l5.59-5.59-1.42-1.41-8 8 8 8 1.41-1.41-5.58-5.59h12.17v-2z"
+            d="M184,0C82.544,0,0,82.544,0,184s82.544,184,184,184s184-82.544,184-184S285.456,0,184,0z M184,352
+				c-92.64,0-168-75.36-168-168S91.36,16,184,16s168,75.36,168,168S276.64,352,184,352z"
+          />
+          <path
+            d="M115.312,184l58.344-58.344c3.128-3.128,3.128-8.184,0-11.312s-8.184-3.128-11.312,0l-64,64
+				c-3.128,3.128-3.128,8.184,0,11.312l64,64c1.56,1.56,3.608,2.344,5.656,2.344c2.048,0,4.096-0.784,5.656-2.344
+				c3.128-3.128,3.128-8.184,0-11.312L115.312,184z"
+          />
+          <path
+            d="M253.656,114.344c-3.128-3.128-8.184-3.128-11.312,0l-64,64c-3.128,3.128-3.128,8.184,0,11.312l64,64
+				c1.56,1.56,3.608,2.344,5.656,2.344c2.048,0,4.096-0.784,5.656-2.344c3.128-3.128,3.128-8.184,0-11.312L195.312,184
+				l58.344-58.344C256.784,122.528,256.784,117.472,253.656,114.344z"
           />
         </svg>
       </div>
@@ -117,13 +130,24 @@
         </h1>
         <svg
           class="arrow arrow--right"
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
+          x="0px"
+          y="0px"
+          viewBox="0 0 368 368"
+          xml:space="preserve"
         >
-          <path d="M0 0h24v24h-24z" fill="none" />
           <path
-            d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"
+            d="M184,0C82.544,0,0,82.544,0,184s82.544,184,184,184s184-82.544,184-184S285.456,0,184,0z M184,352
+				c-92.64,0-168-75.36-168-168S91.36,16,184,16s168,75.36,168,168S276.64,352,184,352z"
+          />
+          <path
+            d="M205.656,114.344c-3.128-3.128-8.184-3.128-11.312,0c-3.128,3.128-3.128,8.184,0,11.312L252.688,184l-58.344,58.344
+				c-3.128,3.128-3.128,8.184,0,11.312c1.56,1.56,3.608,2.344,5.656,2.344c2.048,0,4.096-0.784,5.656-2.344l64-64
+				c3.128-3.128,3.128-8.184,0-11.312L205.656,114.344z"
+          />
+          <path
+            d="M189.656,178.344l-64-64c-3.128-3.128-8.184-3.128-11.312,0s-3.128,8.184,0,11.312L172.688,184l-58.344,58.344
+				c-3.128,3.128-3.128,8.184,0,11.312c1.56,1.56,3.608,2.344,5.656,2.344c2.048,0,4.096-0.784,5.656-2.344l64-64
+				C192.784,186.528,192.784,181.472,189.656,178.344z"
           />
         </svg>
       </div>
@@ -380,113 +404,12 @@ export default {
   }
 }
 
-/* @media (max-width: 640px) {
-  .panels {
-    width: 100%;
-    height: 200vh;
-  }
-  .panels__side {
-    float: none;
-    width: 100%;
-    height: 100vh;
-    display: block;
-    text-align: center;
-  }
-  .panels__side--left,
-  .panels__side--right {
-    top: -25%;
-    left: 0;
-  }
-  .panels__side--left:hover .arrow {
-    -webkit-transform: translate(-50%, -80%) rotate(90deg);
-    transform: translate(-50%, -80%) rotate(90deg);
-  }
-  .panels__side--right:hover .arrow {
-    -webkit-transform: translate(-50%, -20%) rotate(90deg);
-    transform: translate(-50%, -20%) rotate(90deg);
-  }
-  .panels__side--left-active {
-    -webkit-transform: translate(0, 50%);
-    transform: translate(0, 50%);
-  }
-  .panels__side--left-active .panels__side--inner-left {
-    -webkit-transform: rotateX(0);
-    transform: rotateX(0);
-  }
-  .panels__side--left-active .arrow {
-    -webkit-transform: translate(-50%, -50%) rotate(-90deg) !important;
-    transform: translate(-50%, -50%) rotate(-90deg) !important;
-  }
-  .panels__side--right-active {
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-  }
-  .panels__side--right-active .panels__side--inner-right {
-    -webkit-transform: rotateX(0);
-    transform: rotateX(0);
-  }
-  .panels__side--right-active .arrow {
-    -webkit-transform: translate(-50%, -50%) rotate(-90deg) !important;
-    transform: translate(-50%, -50%) rotate(-90deg) !important;
-  }
-  .panels__side--left-hidden {
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-  }
-  .panels__side--right-hidden {
-    -webkit-transform: translate(0, 50%);
-    transform: translate(0, 50%);
-  }
-  .panels__side--inner-left,
-  .panels__side--inner-right,
-  .panels__side--inner {
-    height: 50vh;
-    padding: 2vh 8vw;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-  }
-  .panels__side--inner-left {
-    -webkit-transform-origin: center bottom;
-    transform-origin: center bottom;
-    -webkit-transform: rotateX(90deg);
-    transform: rotateX(90deg);
-  }
-  .panels__side--inner-right {
-    -webkit-transform-origin: center top;
-    transform-origin: center top;
-    -webkit-transform: rotateX(-90deg);
-    transform: rotateX(-90deg);
-  }
-  .panels__headline {
-    font-size: 32px;
-  }
-  .panels p {
-    font-size: 20px;
-  }
-} */
 .arrow {
   position: absolute;
   top: 75%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
+  width: 80px;
   transform: translate(-50%, -50%);
-  fill: #1a1a1a;
-  border: 3px solid #1a1a1a;
-  border-radius: 50%;
-  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
-/* @media (max-width: 640px) {
-  .arrow {
-    -webkit-transform: translate(-50%, -50%) rotate(90deg);
-    transform: translate(-50%, -50%) rotate(90deg);
-  }
-  .arrow--left {
-    top: 25%;
-  }
-} */
 </style>
