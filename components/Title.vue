@@ -95,13 +95,13 @@ body {
 .title {
   font-weight: 800;
   color: transparent;
-  font-size: 120px;
+  font-size: 110px;
   background: url('../assets/images/titleBg.jpg') repeat;
   background-position: 40% 50%;
   background-clip: text;
   position: relative;
   text-align: center;
-  line-height: 100px;
+  line-height: 92px;
   letter-spacing: -8px;
 
   // fill: url(#splash);

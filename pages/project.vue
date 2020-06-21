@@ -39,6 +39,7 @@
                 >페이지 바로가기</a
               >
               <a
+                v-if="popOnData.sourceUrl !== null"
                 class="btn__go btn__sourceGo"
                 :href="popOnData.sourceUrl"
                 target="_blank"
@@ -53,9 +54,6 @@
 </template>
 
 <script>
-// 동인비 , vw, 멸종동물, 스마트카라 유지보수, 베비언스, 쌤소나이트 , 펜타클
-// https://www.kabrita.kr/
-// https://www.event-donginbi.co.kr/mimaskstick/
 import Nav from '@/components/Nav'
 export default {
   components: { Nav },
@@ -105,7 +103,7 @@ export default {
           id: 3,
           title: '펜타클 자사 홈페이지',
           url: 'https://www.pentacle.co.kr/',
-          sourceUrl: '',
+          sourceUrl: null,
           skill: 'HTML5, CSS, Javascript, jQuery',
           role: '50%',
           txt: '펜타클 자사 홈페이지 입니다.<br>( 작업기간 : 2개월  )',

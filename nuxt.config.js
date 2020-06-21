@@ -25,12 +25,15 @@ export default {
     // TODO: script 설정
     script: [],
     // TODO : favicon 설정
-    link: [
+    link: [{
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap'
+      },
       {
         rel: 'stylesheet',
         type: 'text/css',
-        href:
-          'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Staatliches&display=swap'
       },
       {
         rel: 'icon',
