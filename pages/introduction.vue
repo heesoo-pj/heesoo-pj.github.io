@@ -11,22 +11,15 @@ import Panels from '@/components/Panels'
 
 export default {
   components: { Panels, Nav },
+  transition: {
+    name: 'fade',
+    mode: 'out-in'
+  },
   computed: {},
-  methods: {},
-  head() {
-    return {
-      link: [
-        {
-          rel: 'stylesheet',
-          href:
-            'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap'
-        }
-      ]
-    }
-  }
+  methods: {}
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/scss/pages/main';
 </style>

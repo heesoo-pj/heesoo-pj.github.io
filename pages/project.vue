@@ -62,8 +62,8 @@
 import Nav from '@/components/Nav'
 export default {
   components: { Nav },
-  layoutTransition: {
-    name: 'layout',
+  transition: {
+    name: 'fade',
     mode: 'out-in'
   },
   data() {
