@@ -113,7 +113,7 @@
     >
       <div class="panels__side panels__side--inner">
         <h1 class="panels__headline">
-          About myself <input id="" type="checkbox" name="" />
+          About myself
         </h1>
         <svg
           class="arrow arrow--right"
@@ -334,7 +334,7 @@ export default {
   }
 }
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .panels {
     width: 100%;
     height: 200vh;
@@ -421,7 +421,7 @@ export default {
   .panels p {
     font-size: 20px;
   }
-}
+} */
 .arrow {
   position: absolute;
   top: 75%;
@@ -434,7 +434,7 @@ export default {
   -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .arrow {
     -webkit-transform: translate(-50%, -50%) rotate(90deg);
     transform: translate(-50%, -50%) rotate(90deg);
@@ -442,5 +442,5 @@ export default {
   .arrow--left {
     top: 25%;
   }
-}
+} */
 </style>

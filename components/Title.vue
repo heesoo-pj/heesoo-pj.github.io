@@ -1,30 +1,5 @@
 <template>
   <div class="title-wrap">
-    <!-- <svg>
-      <defs>
-        <pattern
-          id="splash"
-          patternUnits="userSpaceOnUse"
-          width="600"
-          height="400"
-          viewbox="0 0 600 400"
-        >
-          <image
-            class="bg__img"
-            xlink:href="https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg"
-            width="600"
-            height="400"
-          />
-        </pattern>
-      </defs>
-    </svg> 
-
-    <h1 class="title">
-      <svg width="600" height="200">
-        <text x="50%" y="50%" text-anchor="middle">PATTERN</text>
-      </svg>
-    </h1>-->
-
     <h1 class="title">LEE HEE SOO PORTFOLIO</h1>
     <p class="subtitle">
       웹퍼블리셔 이희수 포트폴리오 사이트 입니다 :)
@@ -66,53 +41,4 @@ export default {
   }
 }
 </script>
-<style lang="scss" scope>
-@mixin center() {
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-}
-
-html {
-  width: 100%;
-  height: 100%;
-}
-body {
-  background: linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  font-family: 'Raleway', sans-serif;
-}
-.title-wrap {
-  position: absolute;
-  @include center();
-}
-
-.maskbg {
-  mask: url(#maskTitle);
-}
-.title {
-  font-weight: 800;
-  color: transparent;
-  font-size: 108px;
-  background: url('../assets/images/titleBg.jpg') repeat;
-  background-position: 40% 50%;
-  background-clip: text;
-  position: relative;
-  text-align: center;
-  line-height: 92px;
-  letter-spacing: -8px;
-
-  // fill: url(#splash);
-  // color: rgba(#000, 0.5)
-}
-.subtitle {
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 20px;
-  padding-top: 20px;
-  font-family: 'Noto Sans KR', sans-serif;
-}
-</style>
+<style lang="scss" scoped></style>

@@ -200,7 +200,7 @@ export default {
         top: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.6);
         transition: 0.4s opacity;
         opacity: 1;
       }
@@ -217,6 +217,7 @@ export default {
 
 .container {
   display: flex;
+  height: 100vh;
   align-items: center;
   background: linear-gradient(rgb(235, 236, 231), rgb(255, 255, 255));
 }
