@@ -113,7 +113,7 @@
     >
       <div class="panels__side panels__side--inner">
         <h1 class="panels__headline">
-          About myself
+          About myself & Skill
         </h1>
         <svg
           class="arrow arrow--right"
@@ -130,19 +130,32 @@
       <div class="panels__side panels__side--inner-right">
         <p>
           "진취적이며 웃음이 넘치는" 웹퍼블리셔 이희수입니다!<br />
-          홈페이지 유지 보수, 다양한 이벤트 페이지, 사이트 제작으로<br />누구보다
+          홈페이지 유지 보수, 다양한 이벤트 페이지, 사이트 제작으로 누구보다
           재미난 작업물을 많이 작업했으며, <br />그로 인한 다양한 경험을 해왔다
           자부합니다.
           <br />
           <br />
-          혼자 하는 일이 아닌 협업을 하는 일이다 보니,<br />기획자 디자이너 간의
+          혼자 하는 일이 아닌 협업을 하는 일이다 보니, 기획자 디자이너 간의
           소통을 중요하게 생각하고<br />맡은 일에 책임감을 느끼며 일하고
           있습니다.
           <br />
           <br />
-          또한 기술적으로도 안주하지 않고<br />다양한 작업을 하기 위해 끊임없이
-          공부 중이며,<br />현재는 VUE, SVG를 공부 중입니다.
+          또한 기술적으로도 안주하지 않고 다양한 작업을 하기 위해 끊임없이 공부
+          중이며,<br />현재는 VUE, SVG를 공부 중입니다.
         </p>
+
+        <div class="skill__wrap">
+          <h3>Skill</h3>
+          <ul>
+            <li>XHTML, HTML5</li>
+            <li>
+              CSS / CSS3 / Media query / SCSS & LESS / BEM / SMACSS등 CSS방법론
+              / Cross browsing
+            </li>
+            <li>Javascript(ES6) / jQuery / Vue (CLI / NUXT)</li>
+            <li>SVG / AJAX / Git 소스관리 / Gulp</li>
+          </ul>
+        </div>
       </div>
     </article>
     <!-- //right -->
@@ -233,6 +246,10 @@ export default {
 
         .panels__side--inner-right {
           transform: rotateY(0);
+          flex-direction: column;
+          h3 {
+            font-family: 'Staatliches', cursive;
+          }
         }
       }
 
@@ -309,8 +326,8 @@ export default {
     }
   }
   p {
-    font-size: 20px;
-    line-height: 33px;
+    font-size: 19px;
+    line-height: 26px;
     word-break: keep-all;
   }
   .profile__list li {
@@ -330,6 +347,26 @@ export default {
     color: #0b0c0e;
     a {
       color: #0b0c0e;
+    }
+  }
+  .skill__wrap {
+    margin-top: 20px;
+    border-top: 1px solid #33333361;
+    h3 {
+      font-size: 25px;
+      padding: 30px 0 20px;
+    }
+    li {
+      position: relative;
+      line-height: 28px;
+      font-size: 18px;
+      &::before {
+        content: '·';
+        position: absolute;
+        left: -20px;
+        font-size: 50px;
+        color: #f13416;
+      }
     }
   }
 }
