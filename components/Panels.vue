@@ -12,24 +12,6 @@
 
         <h2>이희수 <sub>(1992.12)</sub></h2>
         <ul class="profile__list">
-          <li><span>2015.10 - 2016.03</span> 스마트웹 / 컨텐츠개발 수료</li>
-          <li>
-            <span>2016.04 - 2016.10</span> 더다함커뮤니케이션
-            <ul class="pj__list">
-              <li>킨텍스 원시티</li>
-              <li>거제센트럴자이</li>
-              <li>동천자이 2차</li>
-              <li>평택 자이 더 익스프레스 3차</li>
-              <li>백련산파크자이</li>
-              <li>세종 신동아 파밀리에 4차</li>
-              <li>
-                <a href="http://whitekorea.kr" target="_blank"
-                  >화이트코리아(주)</a
-                >
-              </li>
-            </ul>
-            <p>등 다수 사이트 작업</p>
-          </li>
           <li>
             <span>2016.11 ~ 재직 중</span> 메가존 재직
             <ul class="pj__list">
@@ -87,6 +69,24 @@
             </ul>
             <p>등 다수 페이지, 프로모션 작업</p>
           </li>
+          <li>
+            <span>2016.04 - 2016.10</span> 더다함커뮤니케이션
+            <ul class="pj__list">
+              <li>킨텍스 원시티</li>
+              <li>거제센트럴자이</li>
+              <li>동천자이 2차</li>
+              <li>평택 자이 더 익스프레스 3차</li>
+              <li>백련산파크자이</li>
+              <li>세종 신동아 파밀리에 4차</li>
+              <li>
+                <a href="http://whitekorea.kr" target="_blank"
+                  >화이트코리아(주)</a
+                >
+              </li>
+            </ul>
+            <p>등 다수 사이트 작업</p>
+          </li>
+          <li><span>2015.10 - 2016.03</span> 스마트웹 / 컨텐츠개발 수료</li>
         </ul>
       </div>
       <div class="panels__side panels__side--inner">
@@ -152,6 +152,19 @@
         </svg>
       </div>
       <div class="panels__side panels__side--inner-right">
+        <div class="skill__wrap">
+          <h3>Skill</h3>
+          <ul>
+            <li>XHTML, HTML5</li>
+            <li>
+              CSS / CSS3 / Media query / SCSS & LESS / BEM, SMACSS등 CSS방법론 /
+              Cross browsing
+            </li>
+            <li>Javascript(ES6) / jQuery / Vue (CLI / NUXT)</li>
+            <li>SVG / AJAX / Git 소스관리 / Gulp</li>
+          </ul>
+        </div>
+
         <p>
           "진취적이며 웃음이 넘치는" 웹퍼블리셔 <b>이희수</b>입니다!<br />
           홈페이지 유지 보수, 다양한 이벤트 페이지, 사이트 제작으로 누구보다
@@ -167,19 +180,6 @@
           또한 기술적으로도 안주하지 않고 다양한 작업을 하기 위해 끊임없이 공부
           중이며,<br />현재는 VUE, SVG를 공부 중입니다.
         </p>
-
-        <div class="skill__wrap">
-          <h3>Skill</h3>
-          <ul>
-            <li>XHTML, HTML5</li>
-            <li>
-              CSS / CSS3 / Media query / SCSS & LESS / BEM / SMACSS등 CSS방법론
-              / Cross browsing
-            </li>
-            <li>Javascript(ES6) / jQuery / Vue (CLI / NUXT)</li>
-            <li>SVG / AJAX / Git 소스관리 / Gulp</li>
-          </ul>
-        </div>
       </div>
     </article>
     <!-- //right -->
@@ -350,11 +350,13 @@ export default {
     }
   }
   p {
+    width: 100%;
     font-size: 19px;
     line-height: 26px;
     word-break: keep-all;
   }
   .profile__list li {
+    width: 100%;
     margin: 0;
     font-size: 22px;
     line-height: 35px;
@@ -366,6 +368,7 @@ export default {
     }
   }
   .pj__list li {
+    width: 100%;
     position: relative;
     line-height: 23px;
     font-size: 14px;
@@ -383,8 +386,10 @@ export default {
     }
   }
   .skill__wrap {
-    margin-top: 70px;
-    border-top: 1px solid #33333361;
+    width: 100%;
+    margin-bottom: 70px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #33333361;
     h3 {
       font-size: 25px;
       padding: 30px 0 20px;
