@@ -28,7 +28,7 @@
                 >
               </li>
             </ul>
-            <p>등 다수 페이지 작업</p>
+            <p>등 다수 사이트 작업</p>
           </li>
           <li>
             <span>2016.11 ~ 재직 중</span> 메가존 재직
@@ -85,7 +85,7 @@
                 폭스바겐 투아렉 런칭 사이트
               </li>
             </ul>
-            <p>등 다수 페이지 작업</p>
+            <p>등 다수 페이지, 프로모션 작업</p>
           </li>
         </ul>
       </div>
@@ -342,11 +342,20 @@ export default {
     }
   }
   .pj__list li {
+    position: relative;
     line-height: 23px;
     font-size: 14px;
     color: #0b0c0e;
     a {
       color: #0b0c0e;
+    }
+
+    &::before {
+      content: '·';
+      position: absolute;
+      left: -20px;
+      font-size: 50px;
+      color: #f134169e;
     }
   }
   .skill__wrap {
