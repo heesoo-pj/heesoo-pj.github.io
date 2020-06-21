@@ -130,13 +130,14 @@
       <div class="panels__side panels__side--inner-right">
         <p>
           "진취적이며 웃음이 넘치는" 웹퍼블리셔 이희수입니다!<br />
-          홈페이지 유지 보수, 다양한 이벤트 페이지, 사이트 제작으로 누구보다
-          재미난 작업물을 많이 작업했으며, 그로 인한 다양한 경험을 해왔다
+          홈페이지 유지 보수, 다양한 이벤트 페이지, 사이트 제작으로<br />누구보다
+          재미난 작업물을 많이 작업했으며, <br />그로 인한 다양한 경험을 해왔다
           자부합니다.
           <br />
           <br />
-          혼자 하는 일이 아닌 협업을 하는 일이다 보니, 기획자 디자이너 간의
-          소통을 중요하게 생각하고 맡은 일에 책임감을 느끼며 일하고 있습니다.
+          혼자 하는 일이 아닌 협업을 하는 일이다 보니,<br />기획자 디자이너 간의
+          소통을 중요하게 생각하고<br />맡은 일에 책임감을 느끼며 일하고
+          있습니다.
           <br />
           <br />
           또한 기술적으로도 안주하지 않고<br />다양한 작업을 하기 위해 끊임없이
@@ -256,7 +257,6 @@ export default {
         transform-origin: right center;
         transform: rotateY(-90deg);
         transition-delay: 0.1s;
-        /* background: url('//unsplash.it/1330/900') center/cover; */
         background: url('../assets/images/panels02.jpg') center/cover;
 
         &::before {

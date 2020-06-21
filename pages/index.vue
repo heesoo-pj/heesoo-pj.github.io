@@ -11,15 +11,22 @@ import Title from '@/components/Title'
 
 export default {
   components: { Title, Nav },
-  layoutTransition: {
-    name: 'layout',
-    mode: 'out-in'
-  },
   computed: {},
-  methods: {}
+  methods: {},
+  head() {
+    return {
+      link: [
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap'
+        }
+      ]
+    }
+  }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@/assets/scss/pages/main';
 </style>

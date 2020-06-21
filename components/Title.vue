@@ -95,7 +95,7 @@ body {
 .title {
   font-weight: 800;
   color: transparent;
-  font-size: 110px;
+  font-size: 108px;
   background: url('../assets/images/titleBg.jpg') repeat;
   background-position: 40% 50%;
   background-clip: text;
