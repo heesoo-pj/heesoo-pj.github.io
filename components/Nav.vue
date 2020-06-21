@@ -26,7 +26,6 @@
 export default {
   methods: {
     toggleNav() {
-      console.log('클릭')
       const menuItems = document.querySelector('#overlay')
       const mainWarp = document.querySelector('.mainNav')
       const menuContainer = document.querySelector('.menu-container')

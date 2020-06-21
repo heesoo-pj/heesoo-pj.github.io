@@ -3,8 +3,13 @@
     <Nav />
 
     <ul class="pf__wrap">
-      <li v-for="pf in pfData1" :key="pf.id" @click="openPopup(pf)">
-        {{ pf.title }}
+      <li
+        v-for="pf in pfData1"
+        :key="pf.id"
+        :class="`pf__list--${pf.id}`"
+        @click="openPopup(pf)"
+      >
+        <span class="pf__title">{{ pf.title }}</span>
       </li>
     </ul>
 
@@ -65,7 +70,7 @@ export default {
     return {
       pfData1: [
         {
-          id: 0,
+          id: 'vw',
           title: '폭스바겐 투아렉 프로모션',
           url: 'https://leeheesoo.github.io/vw',
           sourceUrl:
@@ -77,7 +82,7 @@ export default {
           img: '/images/pf/vw.png'
         },
         {
-          id: 1,
+          id: 'donginbi',
           title: '동인비 싱글 에센스 이벤트',
           url: 'https://singleessence.event-donginbi.co.kr/',
           sourceUrl:
@@ -89,7 +94,7 @@ export default {
           img: '/images/pf/donginbi.png'
         },
         {
-          id: 2,
+          id: 'kabrita',
           title: '카브리타 마이크로사이트',
           url: 'https://www.kabrita.kr',
           sourceUrl: '',
@@ -100,17 +105,17 @@ export default {
           img: '/images/pf/kabrita.png'
         },
         {
-          id: 3,
+          id: 'pentacle',
           title: '펜타클 자사 홈페이지',
           url: 'https://www.pentacle.co.kr/',
           sourceUrl: null,
-          skill: 'HTML5, CSS, Javascript, jQuery',
+          skill: 'HTML5, CSS, Javascript, jQuery, 반응형',
           role: '50%',
           txt: '펜타클 자사 홈페이지 입니다.<br>( 작업기간 : 2개월  )',
           img: '/images/pf/pentacle.png'
         },
         {
-          id: 4,
+          id: 'lg',
           title: 'LG U+ 멸종동물 캠페인 (모바일)',
           url: 'https://leeheesoo.github.io/lostpark/',
           sourceUrl:
@@ -122,7 +127,7 @@ export default {
           img: '/images/pf/lg.png'
         },
         {
-          id: 5,
+          id: 'smartcara',
           title: '스마트카라 런칭프로모션',
           url: 'https://www.event-smartcara.com/launching',
           sourceUrl: '',
@@ -152,6 +157,64 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/pages/main';
+
+//포폴
+.pf {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 60vh;
+    margin: 0 auto;
+
+    li {
+      position: relative;
+      width: 30%;
+      height: 45%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: all 0.5s;
+      transform-origin: center center;
+      background-size: cover;
+      background-position: center;
+      border-radius: 5px;
+      overflow: hidden;
+
+      $pfName: (vw, donginbi, kabrita, pentacle, lg, smartcara);
+
+      @each $pf in $pfName {
+        &.pf__list--#{$pf} {
+          background-image: url('../assets/images/pf/main_#{$pf}.jpg');
+        }
+      }
+
+      cursor: pointer;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        transition: 0.4s opacity;
+        opacity: 1;
+      }
+
+      .pf__title {
+        color: #fff;
+        font-size: 1vw;
+        font-weight: bold;
+        z-index: 1;
+      }
+    }
+  }
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -167,6 +230,7 @@ export default {
   left: 0px;
   right: 0px;
   background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
 }
 .popup {
   position: relative;
