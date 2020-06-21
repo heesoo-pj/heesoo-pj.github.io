@@ -342,9 +342,9 @@ export default {
     font-family: 'Staatliches', cursive;
   }
   h2 {
-    margin-bottom: 40px;
-    font-size: 3vw;
-    font-weight: bold;
+    margin-bottom: 14px;
+    font-size: 2vw;
+    font-weight: 700;
     sub {
       font-size: 2vw;
     }
