@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container main__wrap">
     <Nav />
     <Title />
   </div>
@@ -11,19 +11,12 @@ import Title from '@/components/Title'
 
 export default {
   components: { Title, Nav },
+  layoutTransition: {
+    name: 'layout',
+    mode: 'out-in'
+  },
   computed: {},
-  methods: {},
-  head() {
-    return {
-      link: [
-        {
-          rel: 'stylesheet',
-          href:
-            'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap'
-        }
-      ]
-    }
-  }
+  methods: {}
 }
 </script>
 

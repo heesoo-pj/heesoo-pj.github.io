@@ -9,9 +9,13 @@
     <div id="overlay" class="overlay">
       <nav class="overlay-menu">
         <ul>
-          <li><nuxt-link to="/">Main</nuxt-link></li>
-          <li><nuxt-link to="/introduction">Introduction</nuxt-link></li>
-          <li><nuxt-link to="/project">Project</nuxt-link></li>
+          <li @click="toggleNav()"><nuxt-link to="/">Main</nuxt-link></li>
+          <li @click="toggleNav()">
+            <nuxt-link to="/introduction">Introduction</nuxt-link>
+          </li>
+          <li @click="toggleNav()">
+            <nuxt-link to="/project">Project</nuxt-link>
+          </li>
         </ul>
       </nav>
     </div>
@@ -22,6 +26,7 @@
 export default {
   methods: {
     toggleNav() {
+      console.log('클릭')
       const menuItems = document.querySelector('#overlay')
       const mainWarp = document.querySelector('.mainNav')
       const menuContainer = document.querySelector('.menu-container')
