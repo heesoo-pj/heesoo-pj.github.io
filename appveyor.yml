@@ -3,7 +3,7 @@ environment:
   nodejs_version: '12'
   # Encrypt sensitive data (https://ci.appveyor.com/tools/encrypt)
   github_access_token:
-    secure: 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
+    secure: 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
   github_email:
     secure: 237/CUTyCbNPhK2dow2eiozgVOx7IbUHIrlX3KwrU50=
 
@@ -15,15 +15,15 @@ branches:
 # Install scripts. (runs after repo cloning)
 install:
   # switch nodejs version
-  - ps: Install-Product node 12.16.3
+  - ps: Install-Product node $env:12.16.3
   # install modules
   - npm install
   # generate static files
   - npm run generate
   # configure global git credentials store (https://www.appveyor.com/docs/how-to/git-push/)
   - git config --global credential.helper store
-  - ps: Add-Content "heesoo-pj\.git-credentials" "https://$(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):x-oauth-basic@github.com`n"
-  - git config --global user.heesue1205@gmail.com heesue1205@gmail.com
+  - ps: Add-Content "$env:heesoo-pj\.git-credentials" "https://$($env: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):x-oauth-basic@github.com`n"
+  - git config --global user.heesue1205@gmail.com $env:heesue1205@gmail.com
   # deploy to GitHub pages
   - npm run deploy
 
