@@ -44,7 +44,11 @@
   },
   "scripts:": {
     "browserslist": "browserslist",
-    "dev": "nuxt"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "browserslist": [
     "last 2 version",
