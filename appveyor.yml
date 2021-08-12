@@ -15,15 +15,15 @@ branches:
 # Install scripts. (runs after repo cloning)
 install:
   # switch nodejs version
-  - ps: Install-Product node $env:nodejs_version
+  - ps: Install-Product node $env:12.16.3
   # install modules
   - npm install
   # generate static files
   - npm run generate
   # configure global git credentials store (https://www.appveyor.com/docs/how-to/git-push/)
   - git config --global credential.helper store
-  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
-  - git config --global user.email $env:github_email
+  - ps: Add-Content "$env:heesoo-pj\.git-credentials" "https://$($env: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):x-oauth-basic@github.com`n"
+  - git config --global user.heesue1205@gmail.com $env:heesue1205@gmail.com
   # deploy to GitHub pages
   - npm run deploy
 
