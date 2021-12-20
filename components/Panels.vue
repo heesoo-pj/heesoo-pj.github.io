@@ -6,22 +6,17 @@
       @click="openPanels('left')"
     >
       <div class="panels__side panels__side--inner-left">
-        <!-- <p>
-          이름,생년,주소지, 경력사항
-        </p> -->
-
-        <h2>이희수 <sub>(1992.12)</sub></h2>
         <ul class="profile__list">
           <li>
-            <span>2016.11 ~ 재직 중</span> 메가존 재직
+            <span>2020.9 ~ 재직중</span> 인터파크
             <ul class="pj__list">
-              <li>
-                <a
-                  href="https://event.dolce-gusto.co.kr/electronics"
-                  target="_blank"
-                  >돌체쿠스토 일렉트로마트</a
-                >
-              </li>
+              <li>인터파크 유지보수 및 프로젝트 진행</li>
+            </ul>
+          </li>
+          <li>
+            <span>2016.11 ~ 2020.8</span> 메가존
+            <ul class="pj__list">
+              <li>돌체쿠스토 일렉트로마트</li>
               <li>킨더조이, 킨더크리스피 이벤트 작업</li>
               <li>
                 <a href="http://coverdance.seoul.co.kr"
@@ -34,38 +29,10 @@
                 >
               </li>
               <li>Finnq 룰렛이벤트</li>
-              <li>ING생명 모바일 이벤트</li>
-              <li>LG U+ 알뜰 모바일 S9 이벤트</li>
-              <li>
-                <a href="https://www.kabrita.kr/" target="_blank"
-                  >베비언스 카브리타 마이크로 사이트</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.event-donginbi.co.kr/mimaskstick/"
-                  target="_blank"
-                  >동인비 미마스크 프로모션</a
-                >
-              </li>
-              <li>이자녹스 더블 이펙트 프로모션</li>
-              <li>
-                <a
-                  href="https://www.ferrerorocher-event.co.kr/2019_goldenbell"
-                  target="_blank"
-                  >2019 페레로로쉐 골든벨 이벤트</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://events.uplus.co.kr/lostanimalpark"
-                  target="_blank"
-                  >LGU+ 멸종동물공원 프로모션 모바일 페이지</a
-                >
-              </li>
-              <li>
-                폭스바겐 투아렉 런칭 사이트
-              </li>
+              <li>베비언스 카브리타 마이크로 사이트</li>
+              <li>동인비 미마스크 프로모션</li>
+              <li>LGU+ 멸종동물공원 프로모션 모바일 페이지
+              <li>폭스바겐 투아렉 런칭 사이트</li>
             </ul>
             <p>등 다수 페이지, 프로모션 작업</p>
           </li>
@@ -75,9 +42,6 @@
               <li>킨텍스 원시티</li>
               <li>거제센트럴자이</li>
               <li>동천자이 2차</li>
-              <li>평택 자이 더 익스프레스 3차</li>
-              <li>백련산파크자이</li>
-              <li>세종 신동아 파밀리에 4차</li>
               <li>
                 <a href="http://whitekorea.kr" target="_blank"
                   >화이트코리아(주)</a
