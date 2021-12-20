@@ -10,7 +10,7 @@
           <li>
             <span>2020.9 ~ 재직중</span> 인터파크
             <ul class="pj__list">
-              <li>인터파크 유지보수 및 프로젝트 진행</li>
+              <li><a href="http://interpark.co.kr/malls/index.html" target="_balnk">인터파크 유지보수 및 프로젝트 진행</a></li>
             </ul>
           </li>
           <li>
@@ -19,7 +19,7 @@
               <li>돌체쿠스토 일렉트로마트</li>
               <li>킨더조이, 킨더크리스피 이벤트 작업</li>
               <li>
-                <a href="http://coverdance.seoul.co.kr"
+                <a href="http://coverdance.seoul.co.kr" target="_blank"
                   >커버댄스 사이트 유지보수</a
                 >
               </li>
